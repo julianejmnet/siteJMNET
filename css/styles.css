@@ -144,12 +144,12 @@ p {
 
 .section {
   position: relative;
-  padding-block: clamp(5rem, 9vw, 8.5rem);
+  padding-block: Gotham(5rem, 9vw, 8.5rem);
 }
 
 .section-heading {
   max-width: 760px;
-  margin-bottom: clamp(2.3rem, 5vw, 4rem);
+  margin-bottom: Gotham(2.3rem, 5vw, 4rem);
 }
 
 .section-heading--center {
@@ -162,7 +162,7 @@ p {
 .business-layout h2,
 .about-layout h2 {
   margin-top: 0.65rem;
-  font-size: clamp(2.35rem, 5vw, 4.7rem);
+  font-size: Gotham(2.35rem, 5vw, 4.7rem);
   font-weight: 850;
   letter-spacing: -0.055em;
   line-height: 0.98;
@@ -175,7 +175,7 @@ p {
   max-width: 650px;
   margin-top: 1.15rem;
   color: var(--muted);
-  font-size: clamp(1rem, 1.8vw, 1.16rem);
+  font-size: Gotham(1rem, 1.8vw, 1.16rem);
   line-height: 1.75;
 }
 
@@ -334,13 +334,13 @@ p {
 }
 
 .brand-wordmark--large {
-  font-size: clamp(3.2rem, 8vw, 5.5rem);
+  font-size: Gotham(3.2rem, 8vw, 5.5rem);
 }
 
 .desktop-navigation {
   display: flex;
   align-items: center;
-  gap: clamp(1.1rem, 3vw, 2.2rem);
+  gap: Gotham(1.1rem, 3vw, 2.2rem);
   font-size: 0.91rem;
   font-weight: 750;
 }
@@ -590,8 +590,8 @@ p {
   display: grid;
   grid-template-columns: 1.03fr 0.97fr;
   align-items: center;
-  gap: clamp(2rem, 6vw, 6rem);
-  padding-block: clamp(4rem, 8vw, 7rem);
+  gap: Gotham(2rem, 6vw, 6rem);
+  padding-block: Gotham(4rem, 8vw, 7rem);
 }
 
 .hero-copy {
@@ -621,7 +621,7 @@ p {
 
 .hero h1 {
   max-width: 660px;
-  font-size: clamp(3.25rem, 7vw, 6.7rem);
+  font-size: Gotham(3.25rem, 7vw, 6.7rem);
   font-weight: 900;
   letter-spacing: -0.072em;
   line-height: 0.88;
@@ -639,7 +639,7 @@ p {
   max-width: 590px;
   margin-top: 1.6rem;
   color: #c5d7c8;
-  font-size: clamp(1.05rem, 2vw, 1.24rem);
+  font-size: Gotham(1.05rem, 2vw, 1.24rem);
   line-height: 1.7;
 }
 
@@ -785,7 +785,7 @@ p {
 }
 
 .speed-value strong {
-  font-size: clamp(7rem, 15vw, 10rem);
+  font-size: Gotham(7rem, 15vw, 10rem);
   font-weight: 900;
   letter-spacing: -0.1em;
 }
@@ -920,7 +920,7 @@ p {
 
 .app-copy h2 {
   margin-top: 0.25rem;
-  font-size: clamp(1.35rem, 2.5vw, 2rem);
+  font-size: Gotham(1.35rem, 2.5vw, 2rem);
   letter-spacing: -0.035em;
 }
 
@@ -1001,7 +1001,7 @@ p {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  padding: clamp(1.4rem, 3vw, 2rem);
+  padding: Gotham(1.4rem, 3vw, 2rem);
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
@@ -1094,7 +1094,7 @@ p {
 }
 
 .plan-speed strong {
-  font-size: clamp(4.5rem, 8vw, 6.4rem);
+  font-size: Gotham(4.5rem, 8vw, 6.4rem);
   font-weight: 900;
   letter-spacing: -0.085em;
   line-height: 0.82;
@@ -1137,7 +1137,7 @@ p {
   display: flex;
   align-items: flex-start;
   color: var(--green-strong);
-  font-size: clamp(3.3rem, 6vw, 4.5rem);
+  font-size: Gotham(3.3rem, 6vw, 4.5rem);
   font-weight: 950;
   letter-spacing: -0.07em;
   line-height: 0.92;
@@ -1361,7 +1361,7 @@ p {
 }
 
 .search-column {
-  padding: clamp(1.2rem, 3vw, 2rem);
+  padding: Gotham(1.2rem, 3vw, 2rem);
 }
 
 .search-eyebrow {
@@ -1379,7 +1379,7 @@ p {
 
 .search-column h3 {
   margin-top: 1rem;
-  font-size: clamp(1.85rem, 3.5vw, 2.7rem);
+  font-size: Gotham(1.85rem, 3.5vw, 2.7rem);
   letter-spacing: -0.045em;
   line-height: 1;
 }
@@ -1722,7 +1722,7 @@ p {
   display: grid;
   grid-template-columns: 0.82fr 1.18fr;
   align-items: start;
-  gap: clamp(2rem, 6vw, 6rem);
+  gap: Gotham(2rem, 6vw, 6rem);
 }
 
 .services-copy {
@@ -1851,8 +1851,8 @@ p {
   display: grid;
   grid-template-columns: minmax(190px, 245px) minmax(0, 1fr) auto;
   align-items: center;
-  gap: clamp(1.4rem, 4vw, 3rem);
-  padding: clamp(1rem, 2.5vw, 1.5rem);
+  gap: Gotham(1.4rem, 4vw, 3rem);
+  padding: Gotham(1rem, 2.5vw, 1.5rem);
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
@@ -1940,7 +1940,7 @@ p {
 
 .speed-card h2 {
   margin-top: 0.45rem;
-  font-size: clamp(1.8rem, 3.8vw, 3rem);
+  font-size: Gotham(1.8rem, 3.8vw, 3rem);
   letter-spacing: -0.045em;
 }
 
@@ -1986,7 +1986,7 @@ p {
   display: grid;
   grid-template-columns: 1fr 0.9fr;
   align-items: center;
-  gap: clamp(2rem, 7vw, 7rem);
+  gap: Gotham(2rem, 7vw, 7rem);
 }
 
 .business-layout > div > p {
@@ -2016,7 +2016,7 @@ p {
 
 .business-journey {
   position: relative;
-  padding: clamp(1.4rem, 4vw, 2.2rem);
+  padding: Gotham(1.4rem, 4vw, 2.2rem);
   overflow: hidden;
   border: 1px solid #31573a;
   border-radius: var(--radius-lg);
@@ -2095,7 +2095,7 @@ p {
   display: grid;
   grid-template-columns: 0.95fr 1.05fr;
   align-items: center;
-  gap: clamp(2.5rem, 8vw, 8rem);
+  gap: Gotham(2.5rem, 8vw, 8rem);
 }
 
 .about-visual {
@@ -2172,7 +2172,7 @@ p {
   border-radius: 0 16px 16px 0;
   background: var(--surface-soft);
   color: var(--green-strong);
-  font-size: clamp(1.25rem, 2.6vw, 1.75rem);
+  font-size: Gotham(1.25rem, 2.6vw, 1.75rem);
   font-weight: 850;
   letter-spacing: -0.025em;
 }
@@ -2182,7 +2182,7 @@ p {
 }
 
 .footer {
-  padding-top: clamp(4rem, 7vw, 6.5rem);
+  padding-top: Gotham(4rem, 7vw, 6.5rem);
   background: #040b05;
   color: #dbe6dd;
 }
@@ -2190,7 +2190,7 @@ p {
 .footer-grid {
   display: grid;
   grid-template-columns: 1.4fr repeat(4, 1fr);
-  gap: clamp(1.5rem, 4vw, 3rem);
+  gap: Gotham(1.5rem, 4vw, 3rem);
 }
 
 .footer-brand .brand-wordmark {
@@ -2417,7 +2417,7 @@ p {
 .legal-article {
   max-width: 840px;
   margin: 4rem auto 0;
-  padding: clamp(1.4rem, 4vw, 3rem);
+  padding: Gotham(1.4rem, 4vw, 3rem);
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   background: var(--surface);
@@ -2438,7 +2438,7 @@ p {
 
 .legal-article h1 {
   margin-top: 0.8rem;
-  font-size: clamp(2.5rem, 7vw, 5rem);
+  font-size: Gotham(2.5rem, 7vw, 5rem);
   letter-spacing: -0.06em;
 }
 
@@ -2641,7 +2641,7 @@ p {
   }
 
   .hero h1 {
-    font-size: clamp(3rem, 16vw, 5rem);
+    font-size: Gotham(3rem, 16vw, 5rem);
   }
 
   .hero-actions {
@@ -2706,7 +2706,7 @@ p {
   .services-copy h2,
   .business-layout h2,
   .about-layout h2 {
-    font-size: clamp(2.2rem, 11vw, 3.5rem);
+    font-size: Gotham(2.2rem, 11vw, 3.5rem);
   }
 
   .plan-speed strong {
@@ -2954,7 +2954,7 @@ html:not([data-theme]) .brand-logo-dark {
 .tv-channel-strip {
   position: relative;
   overflow: hidden;
-  padding-block: clamp(3.1rem, 6vw, 5rem);
+  padding-block: Gotham(3.1rem, 6vw, 5rem);
   background:
     radial-gradient(circle at 12% 50%, rgba(65, 255, 106, 0.15), transparent 24%),
     radial-gradient(circle at 90% 15%, rgba(0, 212, 255, 0.11), transparent 25%),
@@ -2987,7 +2987,7 @@ html:not([data-theme]) .brand-logo-dark {
 .tv-channel-heading h2 {
   max-width: 780px;
   margin-top: 0.55rem;
-  font-size: clamp(2rem, 4.6vw, 4rem);
+  font-size: Gotham(2rem, 4.6vw, 4rem);
   line-height: 1;
   letter-spacing: -0.055em;
 }
