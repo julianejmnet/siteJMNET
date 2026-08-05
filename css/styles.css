@@ -6,10 +6,10 @@
   --foreground: #0e1911;
   --muted: #5f6b63;
   --line: rgba(17, 61, 29, 0.13);
-  --green: #268f3f;
-  --green-strong: #1f7334;
-  --green-bright: #41ff6a;
-  --green-soft: #8fef77;
+  --green: #b0b6b1;
+  --green-strong: #c1cec4;
+  --green-bright: #bbbdbb;
+  --green-soft: #cfcfcf;
   --deep: #07130a;
   --deep-soft: #0f2a17;
   --cyan: #00d4ff;
@@ -18,7 +18,7 @@
   --warning: #ffb648;
   --shadow-sm: 0 12px 30px rgba(17, 68, 31, 0.08);
   --shadow-md: 0 28px 70px rgba(9, 44, 19, 0.15);
-  --shadow-green: 0 22px 54px rgba(38, 143, 63, 0.26);
+  --shadow-green: 0 22px 54px rgba(44, 70, 50, 0.26);
   --radius-sm: 14px;
   --radius-md: 22px;
   --radius-lg: 34px;
@@ -26,10 +26,10 @@
 }
 
 [data-theme="dark"] {
-  --background: #073419;
-  --surface: #035d03;
-  --surface-soft: #035d03;
-  --surface-glass: hsl(120, 94%, 19%);
+  --background: #a0cfb0;
+  --surface: #a0cfb0;
+  --surface-soft: ##a0cfb0;
+  --surface-glass: rgba(12, 29, 16, 0.84);
   --foreground: #f1fff3;
   --muted: #a4b9a8;
   --line: rgba(143, 239, 119, 0.14);
@@ -38,9 +38,9 @@
 }
 
 [data-contrast="high"] {
-  --background: #000;
-  --surface: #000;
-  --surface-soft: #000;
+  --background: #e7dada;
+  --surface: #e7dada;
+  --surface-soft: #e7dada;
   --foreground: #fff;
   --muted: #fff;
   --line: #fff;
@@ -144,12 +144,12 @@ p {
 
 .section {
   position: relative;
-  padding-block: Gotham(5rem, 9vw, 8.5rem);
+  padding-block: clamp(5rem, 9vw, 8.5rem);
 }
 
 .section-heading {
   max-width: 760px;
-  margin-bottom: Gotham(2.3rem, 5vw, 4rem);
+  margin-bottom: clamp(2.3rem, 5vw, 4rem);
 }
 
 .section-heading--center {
@@ -162,7 +162,7 @@ p {
 .business-layout h2,
 .about-layout h2 {
   margin-top: 0.65rem;
-  font-size: Gotham(2.35rem, 5vw, 4.7rem);
+  font-size: clamp(2.35rem, 5vw, 4.7rem);
   font-weight: 850;
   letter-spacing: -0.055em;
   line-height: 0.98;
@@ -175,7 +175,7 @@ p {
   max-width: 650px;
   margin-top: 1.15rem;
   color: var(--muted);
-  font-size: Gotham(1rem, 1.8vw, 1.16rem);
+  font-size: clamp(1rem, 1.8vw, 1.16rem);
   line-height: 1.75;
 }
 
@@ -334,13 +334,13 @@ p {
 }
 
 .brand-wordmark--large {
-  font-size: Gotham(3.2rem, 8vw, 5.5rem);
+  font-size: clamp(3.2rem, 8vw, 5.5rem);
 }
 
 .desktop-navigation {
   display: flex;
   align-items: center;
-  gap: Gotham(1.1rem, 3vw, 2.2rem);
+  gap: clamp(1.1rem, 3vw, 2.2rem);
   font-size: 0.91rem;
   font-weight: 750;
 }
@@ -590,8 +590,8 @@ p {
   display: grid;
   grid-template-columns: 1.03fr 0.97fr;
   align-items: center;
-  gap: Gotham(2rem, 6vw, 6rem);
-  padding-block: Gotham(4rem, 8vw, 7rem);
+  gap: clamp(2rem, 6vw, 6rem);
+  padding-block: clamp(4rem, 8vw, 7rem);
 }
 
 .hero-copy {
@@ -621,7 +621,7 @@ p {
 
 .hero h1 {
   max-width: 660px;
-  font-size: Gotham(3.25rem, 7vw, 6.7rem);
+  font-size: clamp(3.25rem, 7vw, 6.7rem);
   font-weight: 900;
   letter-spacing: -0.072em;
   line-height: 0.88;
@@ -639,7 +639,7 @@ p {
   max-width: 590px;
   margin-top: 1.6rem;
   color: #c5d7c8;
-  font-size: Gotham(1.05rem, 2vw, 1.24rem);
+  font-size: clamp(1.05rem, 2vw, 1.24rem);
   line-height: 1.7;
 }
 
@@ -702,7 +702,7 @@ p {
   place-items: center;
   overflow: hidden;
   border-radius: 42% 42% 34% 34% / 26% 26% 20% 20%;
-  background: #0b2110;
+  background: #ffffff;
   filter: drop-shadow(0 30px 70px rgba(0, 0, 0, 0.34));
   -webkit-mask-image: radial-gradient(ellipse 67% 58% at 50% 49%, #000 48%, rgba(0, 0, 0, 0.92) 70%, transparent 100%);
   mask-image: radial-gradient(ellipse 67% 58% at 50% 49%, #000 48%, rgba(0, 0, 0, 0.92) 70%, transparent 100%);
@@ -785,7 +785,7 @@ p {
 }
 
 .speed-value strong {
-  font-size: Gotham(7rem, 15vw, 10rem);
+  font-size: clamp(7rem, 15vw, 10rem);
   font-weight: 900;
   letter-spacing: -0.1em;
 }
@@ -920,7 +920,7 @@ p {
 
 .app-copy h2 {
   margin-top: 0.25rem;
-  font-size: Gotham(1.35rem, 2.5vw, 2rem);
+  font-size: clamp(1.35rem, 2.5vw, 2rem);
   letter-spacing: -0.035em;
 }
 
@@ -1001,7 +1001,7 @@ p {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  padding: Gotham(1.4rem, 3vw, 2rem);
+  padding: clamp(1.4rem, 3vw, 2rem);
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
@@ -1094,7 +1094,7 @@ p {
 }
 
 .plan-speed strong {
-  font-size: Gotham(4.5rem, 8vw, 6.4rem);
+  font-size: clamp(4.5rem, 8vw, 6.4rem);
   font-weight: 900;
   letter-spacing: -0.085em;
   line-height: 0.82;
@@ -1137,7 +1137,7 @@ p {
   display: flex;
   align-items: flex-start;
   color: var(--green-strong);
-  font-size: Gotham(3.3rem, 6vw, 4.5rem);
+  font-size: clamp(3.3rem, 6vw, 4.5rem);
   font-weight: 950;
   letter-spacing: -0.07em;
   line-height: 0.92;
@@ -1361,7 +1361,7 @@ p {
 }
 
 .search-column {
-  padding: Gotham(1.2rem, 3vw, 2rem);
+  padding: clamp(1.2rem, 3vw, 2rem);
 }
 
 .search-eyebrow {
@@ -1379,7 +1379,7 @@ p {
 
 .search-column h3 {
   margin-top: 1rem;
-  font-size: Gotham(1.85rem, 3.5vw, 2.7rem);
+  font-size: clamp(1.85rem, 3.5vw, 2.7rem);
   letter-spacing: -0.045em;
   line-height: 1;
 }
@@ -1722,7 +1722,7 @@ p {
   display: grid;
   grid-template-columns: 0.82fr 1.18fr;
   align-items: start;
-  gap: Gotham(2rem, 6vw, 6rem);
+  gap: clamp(2rem, 6vw, 6rem);
 }
 
 .services-copy {
@@ -1851,8 +1851,8 @@ p {
   display: grid;
   grid-template-columns: minmax(190px, 245px) minmax(0, 1fr) auto;
   align-items: center;
-  gap: Gotham(1.4rem, 4vw, 3rem);
-  padding: Gotham(1rem, 2.5vw, 1.5rem);
+  gap: clamp(1.4rem, 4vw, 3rem);
+  padding: clamp(1rem, 2.5vw, 1.5rem);
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
@@ -1940,7 +1940,7 @@ p {
 
 .speed-card h2 {
   margin-top: 0.45rem;
-  font-size: Gotham(1.8rem, 3.8vw, 3rem);
+  font-size: clamp(1.8rem, 3.8vw, 3rem);
   letter-spacing: -0.045em;
 }
 
@@ -1986,7 +1986,7 @@ p {
   display: grid;
   grid-template-columns: 1fr 0.9fr;
   align-items: center;
-  gap: Gotham(2rem, 7vw, 7rem);
+  gap: clamp(2rem, 7vw, 7rem);
 }
 
 .business-layout > div > p {
@@ -2016,7 +2016,7 @@ p {
 
 .business-journey {
   position: relative;
-  padding: Gotham(1.4rem, 4vw, 2.2rem);
+  padding: clamp(1.4rem, 4vw, 2.2rem);
   overflow: hidden;
   border: 1px solid #31573a;
   border-radius: var(--radius-lg);
@@ -2095,7 +2095,7 @@ p {
   display: grid;
   grid-template-columns: 0.95fr 1.05fr;
   align-items: center;
-  gap: Gotham(2.5rem, 8vw, 8rem);
+  gap: clamp(2.5rem, 8vw, 8rem);
 }
 
 .about-visual {
@@ -2172,7 +2172,7 @@ p {
   border-radius: 0 16px 16px 0;
   background: var(--surface-soft);
   color: var(--green-strong);
-  font-size: Gotham(1.25rem, 2.6vw, 1.75rem);
+  font-size: clamp(1.25rem, 2.6vw, 1.75rem);
   font-weight: 850;
   letter-spacing: -0.025em;
 }
@@ -2182,7 +2182,7 @@ p {
 }
 
 .footer {
-  padding-top: Gotham(4rem, 7vw, 6.5rem);
+  padding-top: clamp(4rem, 7vw, 6.5rem);
   background: #040b05;
   color: #dbe6dd;
 }
@@ -2190,7 +2190,7 @@ p {
 .footer-grid {
   display: grid;
   grid-template-columns: 1.4fr repeat(4, 1fr);
-  gap: Gotham(1.5rem, 4vw, 3rem);
+  gap: clamp(1.5rem, 4vw, 3rem);
 }
 
 .footer-brand .brand-wordmark {
@@ -2417,7 +2417,7 @@ p {
 .legal-article {
   max-width: 840px;
   margin: 4rem auto 0;
-  padding: Gotham(1.4rem, 4vw, 3rem);
+  padding: clamp(1.4rem, 4vw, 3rem);
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   background: var(--surface);
@@ -2438,7 +2438,7 @@ p {
 
 .legal-article h1 {
   margin-top: 0.8rem;
-  font-size: Gotham(2.5rem, 7vw, 5rem);
+  font-size: clamp(2.5rem, 7vw, 5rem);
   letter-spacing: -0.06em;
 }
 
@@ -2641,7 +2641,7 @@ p {
   }
 
   .hero h1 {
-    font-size: Gotham(3rem, 16vw, 5rem);
+    font-size: clamp(3rem, 16vw, 5rem);
   }
 
   .hero-actions {
@@ -2706,7 +2706,7 @@ p {
   .services-copy h2,
   .business-layout h2,
   .about-layout h2 {
-    font-size: Gotham(2.2rem, 11vw, 3.5rem);
+    font-size: clamp(2.2rem, 11vw, 3.5rem);
   }
 
   .plan-speed strong {
@@ -2950,14 +2950,15 @@ html:not([data-theme]) .brand-logo-dark {
 
 
 /* Slide contínuo de canais — implementação do arquivo slide.txt */
+/* Alterar cor do fundo do slide dos canais */
 .tv-channel-strip {
   position: relative;
   overflow: hidden;
-  padding-block: Gotham(3.1rem, 6vw, 5rem);
+  padding-block: clamp(3.1rem, 6vw, 5rem);
   background:
     radial-gradient(circle at 12% 50%, rgba(65, 255, 106, 0.15), transparent 24%),
     radial-gradient(circle at 90% 15%, rgba(0, 212, 255, 0.11), transparent 25%),
-    linear-gradient(135deg, #07130a, #0d2815 60%, #07130a);
+    linear-gradient(135deg, #ffffff, #feffff 60%, #ffffff);
   color: #fff;
 }
 
@@ -2986,7 +2987,7 @@ html:not([data-theme]) .brand-logo-dark {
 .tv-channel-heading h2 {
   max-width: 780px;
   margin-top: 0.55rem;
-  font-size: Gotham(2rem, 4.6vw, 4rem);
+  font-size: clamp(2rem, 4.6vw, 4rem);
   line-height: 1;
   letter-spacing: -0.055em;
 }
@@ -3001,8 +3002,8 @@ html:not([data-theme]) .brand-logo-dark {
   z-index: 2;
   overflow: hidden;
   padding-block: 0.55rem;
-  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
-  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #fffdfd 100%, #fffdfd 100%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #fffdfd 100%, #fffdfd 100%, transparent);
 }
 
 .tv-marquee-track {
