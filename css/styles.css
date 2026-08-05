@@ -524,8 +524,8 @@ p {
   isolation: isolate;
   overflow: hidden;
   min-height: min(840px, calc(100vh - 108px));
-  background: #081f0e;
-  color: #081f0e;
+  background: #07130a;
+  color: #07130a;
 }
 
 .network-grid {
