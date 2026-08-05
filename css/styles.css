@@ -524,7 +524,7 @@ p {
   isolation: isolate;
   overflow: hidden;
   min-height: min(840px, calc(100vh - 108px));radial
-  background: #081f0e;
+  background: -gradient(circle at 78% 42%, rgba(46, 160, 70, 0.27), transparent 24%), linear-gradient(145deg, #061108 0%, #0b2110 55%, #102e18 100%);
   color: #fff;
 }
 
