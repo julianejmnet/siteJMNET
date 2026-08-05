@@ -26,10 +26,10 @@
 }
 
 [data-theme="dark"] {
-  --background: #a0cfb0;
-  --surface: #a0cfb0;
-  --surface-soft: ##a0cfb0;
-  --surface-glass: rgba(12, 29, 16, 0.84);
+  --background: #073419;
+  --surface: #073419;
+  --surface-soft: #073419;
+  --surface-glass: rgba(0, 2, 0, 0.84);
   --foreground: #f1fff3;
   --muted: #a4b9a8;
   --line: rgba(143, 239, 119, 0.14);
@@ -38,14 +38,14 @@
 }
 
 [data-contrast="high"] {
-  --background: #e7dada;
-  --surface: #e7dada;
-  --surface-soft: #e7dada;
-  --foreground: #fff;
-  --muted: #fff;
-  --line: #fff;
-  --green: #00ff55;
-  --green-strong: #00b83d;
+  --background: #05a405;
+  --surface: #05a405;
+  --surface-soft: #05a405;
+  --foreground: #05a405;
+  --muted: #05a405;
+  --line: #05a405;
+  --green: #05a405;
+  --green-strong: #05a405;
 }
 
 [data-text-scale="large"] {
@@ -144,12 +144,12 @@ p {
 
 .section {
   position: relative;
-  padding-block: Gotham(5rem, 9vw, 8.5rem);
+  padding-block: clamp(5rem, 9vw, 8.5rem);
 }
 
 .section-heading {
   max-width: 760px;
-  margin-bottom: Gotham(2.3rem, 5vw, 4rem);
+  margin-bottom: clamp(2.3rem, 5vw, 4rem);
 }
 
 .section-heading--center {
@@ -251,13 +251,13 @@ p {
 .button-dark {
   background: var(--deep);
   color: #fff;
-  box-shadow: 0 14px 34px rgba(7, 19, 10, 0.22);
+  box-shadow: 0 14px 34px #05a405;
 }
 
 .button-light {
   background: #fff;
   color: var(--deep);
-  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 14px 34px #05a405;
 }
 
 .button-ghost {
@@ -340,7 +340,7 @@ p {
 .desktop-navigation {
   display: flex;
   align-items: center;
-  gap: Gotham(1.1rem, 3vw, 2.2rem);
+  gap: clamp(1.1rem, 3vw, 2.2rem);
   font-size: 0.91rem;
   font-weight: 750;
 }
@@ -381,11 +381,11 @@ p {
   min-height: 44px;
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.0rem;
   padding-inline: 1rem;
   border-radius: 999px;
-  background: var(--green);
-  color: #fff;
+  background: #05a405;
+  color: #ffffff;
   font-size: 0.82rem;
   font-weight: 800;
   box-shadow: 0 12px 28px rgba(38, 143, 63, 0.22);
@@ -403,9 +403,9 @@ p {
   display: grid;
   place-items: center;
   padding: 0;
-  border: 1px solid var(--line);
+  border: 1px solid #08b108;
   border-radius: 50%;
-  background: var(--surface);
+  background: #ffffff);
   cursor: pointer;
   transition: border-color 180ms ease, color 180ms ease, transform 180ms ease;
 }
@@ -590,8 +590,8 @@ p {
   display: grid;
   grid-template-columns: 1.03fr 0.97fr;
   align-items: center;
-  gap: Gotham(2rem, 6vw, 6rem);
-  padding-block: Gotham(4rem, 8vw, 7rem);
+  gap: clamp(2rem, 6vw, 6rem);
+  padding-block: clamp(4rem, 8vw, 7rem);
 }
 
 .hero-copy {
@@ -1001,7 +1001,7 @@ p {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  padding: Gotham(1.4rem, 3vw, 2rem);
+  padding: clamp(1.4rem, 3vw, 2rem);
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
@@ -1361,7 +1361,7 @@ p {
 }
 
 .search-column {
-  padding: Gotham(1.2rem, 3vw, 2rem);
+  padding: clamp(1.2rem, 3vw, 2rem);
 }
 
 .search-eyebrow {
@@ -1722,7 +1722,7 @@ p {
   display: grid;
   grid-template-columns: 0.82fr 1.18fr;
   align-items: start;
-  gap: Gotham(2rem, 6vw, 6rem);
+  gap: clamp(2rem, 6vw, 6rem);
 }
 
 .services-copy {
@@ -1851,8 +1851,8 @@ p {
   display: grid;
   grid-template-columns: minmax(190px, 245px) minmax(0, 1fr) auto;
   align-items: center;
-  gap: Gotham(1.4rem, 4vw, 3rem);
-  padding: Gotham(1rem, 2.5vw, 1.5rem);
+  gap: clamp(1.4rem, 4vw, 3rem);
+  padding: clamp(1rem, 2.5vw, 1.5rem);
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
@@ -1986,7 +1986,7 @@ p {
   display: grid;
   grid-template-columns: 1fr 0.9fr;
   align-items: center;
-  gap: Gotham(2rem, 7vw, 7rem);
+  gap: clamp(2rem, 7vw, 7rem);
 }
 
 .business-layout > div > p {
@@ -2016,7 +2016,7 @@ p {
 
 .business-journey {
   position: relative;
-  padding: Gotham(1.4rem, 4vw, 2.2rem);
+  padding: clamp(1.4rem, 4vw, 2.2rem);
   overflow: hidden;
   border: 1px solid #31573a;
   border-radius: var(--radius-lg);
@@ -2095,7 +2095,7 @@ p {
   display: grid;
   grid-template-columns: 0.95fr 1.05fr;
   align-items: center;
-  gap: Gotham(2.5rem, 8vw, 8rem);
+  gap: clamp(2.5rem, 8vw, 8rem);
 }
 
 .about-visual {
@@ -2182,7 +2182,7 @@ p {
 }
 
 .footer {
-  padding-top: Gotham(4rem, 7vw, 6.5rem);
+  padding-top: clamp(4rem, 7vw, 6.5rem);
   background: #040b05;
   color: #dbe6dd;
 }
@@ -2190,7 +2190,7 @@ p {
 .footer-grid {
   display: grid;
   grid-template-columns: 1.4fr repeat(4, 1fr);
-  gap: Gotham(1.5rem, 4vw, 3rem);
+  gap: clamp(1.5rem, 4vw, 3rem);
 }
 
 .footer-brand .brand-wordmark {
@@ -2261,7 +2261,7 @@ p {
   display: flex;
   align-items: center;
   gap: 0.55rem;
-  padding: 0.35rem 1.05rem 0.35rem 0.35rem;
+  padding: 0.30rem 0.30rem 0.30rem 0.30rem;
   border-radius: 999px;
   background: #1f963f;
   color: #fff;
@@ -2417,7 +2417,7 @@ p {
 .legal-article {
   max-width: 840px;
   margin: 4rem auto 0;
-  padding: Gotham(1.4rem, 4vw, 3rem);
+  padding: clamp(1.4rem, 4vw, 3rem);
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   background: var(--surface);
@@ -2954,7 +2954,7 @@ html:not([data-theme]) .brand-logo-dark {
 .tv-channel-strip {
   position: relative;
   overflow: hidden;
-  padding-block: Gotham(3.1rem, 6vw, 5rem);
+  padding-block: clamp(3.1rem, 6vw, 5rem);
   background:
     radial-gradient(circle at 12% 50%, rgba(65, 255, 106, 0.15), transparent 24%),
     radial-gradient(circle at 90% 15%, rgba(0, 212, 255, 0.11), transparent 25%),
