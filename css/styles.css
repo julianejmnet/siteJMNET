@@ -26,10 +26,10 @@
 }
 
 [data-theme="dark"] {
-  --background: #071109;
-  --surface: #0c1d10;
-  --surface-soft: #102617;
-  --surface-glass: rgba(12, 29, 16, 0.84);
+  --background: #073419;
+  --surface: #035d03;
+  --surface-soft: #035d03;
+  --surface-glass: hsl(120, 94%, 19%);
   --foreground: #f1fff3;
   --muted: #a4b9a8;
   --line: rgba(143, 239, 119, 0.14);
