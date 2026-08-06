@@ -3083,3 +3083,23 @@ html:not([data-theme]) .brand-logo-dark {
     mask-image: none;
   }
 }
+
+/* Por padrão (Modo Claro), mostra a logo preta e oculta a branca */
+.html[data-theme="light"] .brand-logo-dark,
+body:not([data-theme="dark"]) .brand-logo-dark {
+  display: none;
+}
+
+.html[data-theme="light"] .brand-logo-light,
+body:not([data-theme="dark"]) .brand-logo-light {
+  display: block;
+}
+
+/* No Modo Escuro, mostra a logo branca e oculta a preta */
+[data-theme="dark"] .brand-logo-light {
+  display: none;
+}
+
+[data-theme="dark"] .brand-logo-dark {
+  display: block;
+}
