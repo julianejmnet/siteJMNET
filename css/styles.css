@@ -4621,4 +4621,98 @@ b {
   right:10px;
 }
 
+.tv-channel-heading{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    margin-bottom:35px;
+}
 
+.tv-channel-heading h2{
+    display:block;
+    width:100%;
+    margin:0 0 8px;
+    font-size:36px;
+    font-weight:800;
+}
+
+.tv-channel-heading p{
+    display:block;
+    width:100%;
+    margin:0;
+    font-size:16px;
+    opacity:.75;
+}
+
+.tv-channel-heading h2{
+    color:var(--text-color);
+}
+
+.tv-channel-heading h2 span{
+    color:#05a405;
+}
+
+.coverage-alert p {
+  color: var(--text-color, #222);
+}
+
+.coverage-alert strong {
+  color: inherit;
+}
+
+.coverage-alert p,
+.coverage-alert strong {
+  color: #1f2937;
+}
+
+/* modo escuro */
+[data-theme="dark"] .coverage-alert p,
+[data-theme="dark"] .coverage-alert strong {
+  color: #ffffff;
+}
+
+.tv-marquee {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.tv-channel-track {
+  display: flex;
+  width: max-content;
+  animation: canaisPassando 25s linear infinite;
+}
+
+.tv-channel-list {
+  display: flex;
+  gap: 25px;
+  padding-right: 25px;
+}
+
+@keyframes canaisPassando {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.tv-channel-track {
+  animation: canaisPassando 8s linear infinite !important;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+.tv-channel-strip {
+  margin-top: -90px;
+}
+
+.tv-channel-strip {
+  transform: translateY(-30px);
+}
