@@ -124,7 +124,7 @@
               poster="media/robo-jmnet-poster.jpg"
               aria-label="Robô da JMNET acenando e exibindo sinal de Wi-Fi"
             >
-              <source src="media/robojmnetpng.webm" type="video/webm">
+               <source src="media/robojmnetpng.webm" type="video/webm">
               Seu navegador não oferece suporte à reprodução deste vídeo.
             </video>
           </div>
@@ -214,29 +214,50 @@
 
 
     <section class="tv-channel-strip" id="canais" aria-labelledby="tv-channel-title">
-      <div class="shell tv-channel-heading reveal">
- 
-      </div>
+    <div class="shell tv-channel-heading reveal">
+  <h2>JMNET TV</h2>
+  <p>Seus canais favoritos de informação e entretenimento.</p>
+</div>
 
-      <div class="tv-marquee" aria-label="Canais de TV aberta em destaque">
-        <div class="tv-marquee-track">
-          <div class="tv-channel-list">
-            <figure class="tv-channel-item"><img src="assets/canais/globo.svg" alt="Globo"><figcaption>Notícias e entretenimento</figcaption></figure>
-            <figure class="tv-channel-item"><img src="assets/canais/sbt.svg" alt="SBT"><figcaption>Variedades e diversão</figcaption></figure>
-            <figure class="tv-channel-item"><img src="assets/canais/record.svg" alt="Record"><figcaption>Jornalismo e programação</figcaption></figure>
-            <figure class="tv-channel-item"><img src="assets/canais/band.svg" alt="Band"><figcaption>Esporte e informação</figcaption></figure>
-            <figure class="tv-channel-item"><img src="assets/canais/cultura.svg" alt="TV Cultura"><figcaption>Educação e cultura</figcaption></figure>
-            <figure class="tv-channel-item"><img src="assets/canais/redetv.svg" alt="RedeTV!"><figcaption>Conteúdo aberto</figcaption></figure>
-          </div>
+      <div class="tv-marquee">
 
-          <div class="tv-channel-list" aria-hidden="true">
-            <figure class="tv-channel-item"><img src="/media/globo.svg" alt=""><figcaption>Notícias e entretenimento</figcaption></figure>
-            <figure class="tv-channel-item"><img src="/media//sbt.svg" alt=""><figcaption>Variedades e diversão</figcaption></figure>
-            <figure class="tv-channel-item"><img src="/media/record.svg" alt=""><figcaption>Jornalismo e programação</figcaption></figure>
-            <figure class="tv-channel-item"><img src="/media/band.svg" alt=""><figcaption>Esporte e informação</figcaption></figure>
-            <figure class="tv-channel-item"><img src="/media/cultura.svg" alt=""><figcaption>Educação e cultura</figcaption></figure>
-            <figure class="tv-channel-item"><img src="/media/redetv.svg" alt=""><figcaption>Conteúdo aberto</figcaption></figure>
-          </div>
+  <div class="tv-marquee-track" id="tv-track">
+
+    <div class="tv-channel-list">
+      <figure class="tv-channel-item">
+        <img src="media/globo.png" alt="Globo">
+        <figcaption>Notícias e entretenimento</figcaption>
+      </figure>
+
+      <figure class="tv-channel-item">
+        <img src="media/sbt.png" alt="SBT">
+        <figcaption>Variedades e diversão</figcaption>
+      </figure>
+
+      <figure class="tv-channel-item">
+        <img src="media/record.png" alt="Record">
+        <figcaption>Jornalismo e programação</figcaption>
+      </figure>
+
+      <figure class="tv-channel-item">
+        <img src="media/band.png" alt="Band">
+        <figcaption>Esporte e informação</figcaption>
+      </figure>
+
+      <figure class="tv-channel-item">
+        <img src="media/tvcultura.png" alt="TV Cultura">
+        <figcaption>Educação e cultura</figcaption>
+      </figure>
+
+      <figure class="tv-channel-item">
+        <img src="media/redetv.png" alt="RedeTV">
+        <figcaption>Conteúdo aberto</figcaption>
+      </figure>
+    </div>
+
+  </div>
+
+</div>
         </div>
       </div>
     </section>
@@ -246,8 +267,10 @@
       <div class="shell app-layout">
         <div class="app-copy reveal">
           <div class="app-icon-wrap">
-            <img src="https://play-lh.googleusercontent.com/1IoswO_XCcGz_k8vY4BEgU63yGH5uxIaAbDE3oo8uBN2f0t-ozpZdtza3gKra1Xo_cyH-FxLYPo8WA3YIXo" alt="JMNET Cliente Ícone" />
-          </div>
+  <!-- Troque "logo-preta.png" pelo nome exato que está na sua pasta -->
+  <img src="logo-preta.png" alt="JMNET" class="logo-light">
+  <img src="logo-branca.png" alt="JMNET" class="logo-dark">
+</div>
           <div>
             <span class="section-kicker">Aplicativo oficial</span>
             <h2>JMNET Cliente</h2>
@@ -358,7 +381,7 @@
               poster="media/atendente-jmnet-speed-poster.jpg"
               aria-label="Atendente virtual da JMNET apresentando o teste de velocidade"
             >
-              <source src="media/atendente-jmnet-speed.mp4" type="video/mp4">
+             <source src="media/claravirtual.mp4" type="video/mp4">
               Seu navegador não oferece suporte à reprodução deste vídeo.
             </video>
 
@@ -377,10 +400,23 @@
     <section class="section about-section" id="jmnet">
       <div class="shell about-layout">
         <div class="about-visual reveal">
-          <div class="about-logo-panel"> <source src="media/atendente-jmnet-speed.mp4?v=2"> </div>
-          <div class="about-stat about-stat--year"><strong>2014</strong><span>Ano de fundação informado</span></div>
-          <div class="about-stat about-stat--support"><i data-lucide="headphones"></i><strong>24h</strong></div>
-        </div>
+  <div class="about-logo-panel">
+    <img
+    src="media/frente-jmnet.png"
+    alt="Fachada da JMNET"
+    class="about-company-image">
+  </div>
+
+  <div class="about-stat about-stat--year">
+    <strong>2014</strong>
+    <span>Desde</span>
+  </div>
+
+  <div class="about-stat about-stat--support">
+    <i data-lucide="headphones"></i>
+    <strong>24h</strong>
+  </div>
+</div>
         <div class="reveal">
 
           <p>A JMNET atua em Itabuna com conectividade para residências e empresas. Desde 2014, aproxima pessoas, trabalho, estudo e entretenimento por meio de uma experiência simples e humana.</p>
@@ -407,7 +443,7 @@
       <div><h2>Navegação</h2><a href="#empresas">Corporativo</a><a href="#residencial">Residencial</a><a href="#canais">Canais</a><a href="#jmnet">JMNET</a></div>
       <div><h2>Atendimento</h2><p>Segunda a sábado<br>08h às 18h</p><p></p><a href="tel:+557330269305">(73) 3026-9305</a><a href="mailto:atendimento@jmnet.net.br">atendimento@jmnet.net.br</a><a href="#aplicativo">Aplicativo JMNET</a></div>
       <div><h2>Localização</h2><p>Rua São Francisco, 170<br> Nossa Senhora de Fátima<br>Itabuna–BA</p><a href="https://www.google.com/maps/search/?api=1&query=Rua%20S%C3%A3o%20Francisco%20160%20Itabuna%20BA" target="_blank" rel="noopener noreferrer">Abrir no mapa</a></div>
-      <div><h2>Legal</h2><a href="lgpd.html">LGPD</a><a href="politica-de-privacidade.html">Política de Privacidade</a><a href="politica-de-cookies.html">Política de Cookies</a><a href="termos-de-uso.html">Termos de Uso</a><a href="https://vagas.solides.com.br/vagas" target="_blank" rel="noopener noreferrer">Trabalhe Conosco</a><button type="button" data-cookie-settings-trigger>Gerenciar cookies</button></div>
+      <div><h2>Legal</h2><a href="lgpd.html">LGPD</a><a href="politica-de-privacidade.html">Política de Privacidade</a><a href="politica-de-cookies.html">Política de Cookies</a><a href="termos-de-uso.html">Termos de Uso</a><a href="https://vagas.solides.com.br/vagas" target="_blank" rel="noopener noreferrer">Trabalhe Conosco</a><button type="button" data-cookie-settings-trigger>Gerenciar Cookies</button></div>
     </div>
     <div class="shell footer-bottom"><span>© <span id="current-year"></span> JMNET. Todos os direitos reservados.</span><span>J dos Santos Maciel • CNPJ 20.062.925/0001-74</span></div>
   </footer>
@@ -469,5 +505,37 @@
     observer.observe(document.body, { childList: true, subtree: true });
   })();
 </script>
+
+<div class="whatsapp-float-preview">
+  <span class="whatsapp-preview-title">🤖 Atendente JMNET</span>
+  <span class="whatsapp-preview-text">Olá! Precisa de ajuda com os planos ou suporte?</span>
+</div>
+
+<div class="jmnet-whatsapp-widget">
+  <div class="jmnet-wa-chatbox">
+    <div class="jmnet-wa-header">
+      <div class="jmnet-wa-avatar">🤖</div>
+      <div class="jmnet-wa-info">
+        <h4>Atendente JMNET</h4>
+        <span>Online</span>
+      </div>
+    </div>
+    <div class="jmnet-wa-body">
+      <div class="jmnet-wa-message">
+        Olá! 👋 Seja bem-vindo à JMNET. Como podemos ajudar você hoje?
+        <div class="jmnet-wa-time">Agora mesmo</div>
+      </div>
+    </div>
+    <div class="jmnet-wa-footer">
+      <a href="https://api.whatsapp.com/send/?phone=557330269305&text=Ol%C3%A1%21+Quero+conhecer+os+planos+da+JMNET.&type=phone_number&app_absent=0" target="_blank" class="jmnet-wa-start-btn">Iniciar Conversa</a>
+    </div>
+  </div>
+
+  <a href="https://api.whatsapp.com/send/?phone=557330269305&text=Ol%C3%A1%21+Quero+conhecer+os+planos+da+JMNET.&type=phone_number&app_absent=0" target="_blank" class="jmnet-wa-button" aria-label="Fale conosco no WhatsApp">
+    <img src="media/mascote-avatar.webp" alt="Atendente JMNET" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+  </a>
+</div>
+
+
 </body>
 </html>
