@@ -26,23 +26,18 @@
 }
 
 html[data-theme="light"]{
-    --background:#f7fbf8;
-
-    --surface:#ffffff;
-    --surface-soft:#eef8f0;
-    --surface-glass:rgba(255,255,255,.82);
-
-    --foreground:#0e1911;
-    --muted:#5f6b63;
-
-    --line:rgba(17,61,29,.13);
-
-    --green:#2fa94c;
-    --green-strong:#22863a;
-    --green-soft:#b9e7c1;
-    --green-bright:#05a405;
-
-    --deep:#07130a;
+  --background: #f7fbf8;
+  --surface: #ffffff;
+  --surface-soft: #eef8f0;
+  --surface-glass: rgba(255,255,255,.82);
+  --foreground: #0e1911;
+  --muted: #5f6b63;
+  --line: rgba(17,61,29,.13);
+  --green: #2fa94c;
+  --green-strong: #22863a;
+  --green-soft: #b9e7c1;
+  --green-bright: #05a405;
+  --deep: #07130a;
 }
 
 html[data-theme="dark"] {
@@ -50,20 +45,15 @@ html[data-theme="dark"] {
   --surface: #102016;
   --surface-soft: #15281b;
   --surface-glass: rgba(10,18,12,.82);
-
   --foreground: #f5f7f6;
   --muted: #b3beb5;
-
   --line: rgba(255,255,255,.08);
-
-  --green: #ffff;
-  --green-strong: #ffff;
-  --green-bright: ##05a405;
+  --green: #ffffff;
+  --green-strong: #ffffff;
+  --green-bright: #05a405; /* Corrigido de ##05a405 para #05a405 */
   --green-soft: #baf6c7;
-
   --deep: #050805;
   --deep-soft: #0b140d;
-
   --shadow-sm: 0 14px 34px rgba(0,0,0,.35);
   --shadow-md: 0 28px 70px rgba(0,0,0,.5);
 }
@@ -72,12 +62,9 @@ html[data-theme="dark"] {
   --background: #000;
   --surface: #000;
   --surface-soft: #111;
-
   --foreground: #fff;
   --muted: #eee;
-
   --line: #fff;
-
   --green: #05a405;
   --green-strong: #05a405;
 }
@@ -94,7 +81,6 @@ html {
   scroll-behavior: smooth;
   scrollbar-color: var(--green) var(--background);
 }
-
 
 body {
   min-width: 320px;
@@ -197,7 +183,7 @@ p {
 .business-layout h2,
 .about-layout h2 {
   margin-top: 0.65rem;
-  font-size: clamp(2.35rem, 5vw, 4.7rem); /* Corrigido de Gotham() para clamp() */
+  font-size: clamp(2.35rem, 5vw, 4.7rem); /* Substituído Gotham() por clamp() */
   font-weight: 850;
   letter-spacing: -0.055em;
   line-height: 0.98;
@@ -210,7 +196,7 @@ p {
   max-width: 650px;
   margin-top: 1.15rem;
   color: var(--muted);
-  font-size: clamp(1rem, 1.8vw, 1.16rem); /* Corrigido de Gotham() para clamp() */
+  font-size: clamp(1rem, 1.8vw, 1.16rem); /* Substituído Gotham() por clamp() */
   line-height: 1.75;
 }
 
@@ -232,6 +218,8 @@ p {
   background: currentColor;
   content: "";
 }
+
+/* ... demais classes do seu código mantidas com correções pontuais ... */
 
 .section-kicker--light {
   color: var(--green-soft);
@@ -594,7 +582,7 @@ html[data-theme="dark"] .desktop-navigation a:hover {
    /*isolation: isolate;*/
    /*overflow: hidden;*/
    /*min-height: min(840px, calc(100vh - 108px));*/
-  background: #081e0e;
+ background: linear-gradient(135deg, #050d08 0%, #081e0e 50%, #143d22 100%);
   color: #fff;
 }
 
@@ -3482,4 +3470,145 @@ body.dark-mode .round-button {
 body.dark-mode .round-button:hover {
   border-color: var(--green) !important;
   color: var(--green) !important;
+}
+
+/* Garante o fundo correto para os cards dos planos no tema claro */
+html[data-theme="light"] .plan-card {
+  background: var(--surface) !important;
+  border-color: var(--line) !important;
+}
+
+/* Garante que os textos e preços dentro do card fiquem legíveis no tema claro */
+html[data-theme="light"] .plan-card h3,
+html[data-theme="light"] .plan-card .plan-speed strong,
+html[data-theme="light"] .plan-card .plan-price > strong {
+  color: var(--foreground) !important;
+}
+
+html[data-theme="light"] .plan-card > p,
+html[data-theme="light"] .plan-card li,
+html[data-theme="light"] .plan-card .plan-topline,
+html[data-theme="light"] .plan-card .plan-price > span {
+  color: var(--muted) !important;
+}
+
+/* Remove o efeito/sombreado do canto superior direito dos cards no tema claro */
+html[data-theme="light"] .plan-card::after {
+  display: none !important;
+}
+
+/* Corrige a linha colorida no topo de cada card para usar a cor correta em vez de preto no tema claro */
+html[data-theme="light"] .plan-card {
+  border-top-color: var(--plan-accent, var(--green)) !important;
+}
+
+html[data-theme="light"] .plan-card--lime {
+  border-top-color: #56c56a !important;
+}
+
+html[data-theme="light"] .plan-card--cyan {
+  border-top-color: #00d4ff !important;
+}
+
+html[data-theme="light"] .plan-card--violet {
+  border-top-color: #8b5cf6 !important;
+}
+
+/* Remove qualquer traço, linha ou sombra preta no topo/canto dos cards no tema claro */
+html[data-theme="light"] .plan-card::before {
+  background: var(--plan-accent, var(--green)) !important;
+  height: 5px !important;
+}
+
+/* Garante que a borda superior use a cor correta do plano e não preto */
+html[data-theme="light"] .plan-card {
+  border-top: 5px solid var(--plan-accent, var(--green)) !important;
+}
+
+html[data-theme="light"] .plan-card--lime {
+  border-top-color: #56c56a !important;
+  --plan-accent: #56c56a;
+}
+
+html[data-theme="light"] .plan-card--cyan {
+  border-top-color: #00d4ff !important;
+  --plan-accent: #00d4ff;
+}
+
+html[data-theme="light"] .plan-card--violet {
+  border-top-color: #8b5cf6 !important;
+  --plan-accent: #8b5cf6;
+}
+
+/* Força a cor correta no número dos megas dos planos no tema claro */
+html[data-theme="light"] .plan-card--lime .plan-speed strong,
+html[data-theme="light"] .plan-card--lime .plan-speed span {
+  color: #56c56a !important;
+}
+
+html[data-theme="light"] .plan-card--cyan .plan-speed strong,
+html[data-theme="light"] .plan-card--cyan .plan-speed span {
+  color: #00d4ff !important;
+}
+
+html[data-theme="light"] .plan-card--violet .plan-speed strong,
+html[data-theme="light"] .plan-card--violet .plan-speed span {
+  color: #8b5cf6 !important;
+}
+
+/* Remove os círculos com efeito blur escuro que criam o sombreado nas pontas da seção de planos no tema claro */
+html[data-theme="light"] .plans-section::before {
+  display: none !important;
+}
+
+/* Caso haja algum outro elemento ou pseudo-elemento gerando sombra nas laterais da seção */
+html[data-theme="light"] .plans-section {
+  box-shadow: none !important;
+}
+
+/* Remove qualquer pseudo-elemento esquerdo ou direito (como o ::after) que crie sombras na seção de planos no tema claro */
+html[data-theme="light"] .plans-section::after {
+  display: none !important;
+}
+
+/* Garante que a seção fique totalmente limpa nas laterais */
+html[data-theme="light"] .plans-section {
+  position: relative !important;
+  overflow: hidden !important;
+  background: var(--background) !important;
+}
+
+/* Força o gradiente na seção hero e limpa qualquer fundo interno conflitante */
+.hero {
+  background: linear-gradient(135deg, #050805 0%, #081e0e 55%, #0e2a17 100%) !important;
+}
+
+html[data-theme="light"] .hero {
+  background: linear-gradient(135deg, #ffffff 0%, #f0f8f2 55%, #dcefe0 100%) !important;
+}
+
+/* Remove fundos sólidos que possam estar cobrindo o gradiente nas camadas internas */
+.hero .network-grid {
+  background-image: none !important;
+  background-color: transparent !important;
+}
+
+/* Ajuste definitivo para o texto principal do Hero no tema claro */
+html[data-theme="light"] .hero h1 {
+  color: #0e1911 !important;
+  background: none !important;
+}
+
+html[data-theme="light"] .hero h1 span {
+  background: linear-gradient(100deg, #0e1911 0%, #2fa94c 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+html[data-theme="light"] .hero-lead {
+  color: #435248 !important;
+}
+
+html[data-theme="light"] .hero-proof {
+  color: #435248 !important;
 }
