@@ -4862,3 +4862,16 @@ body[data-theme="dark"] .leaflet-control-zoom a {
 .benefit-card:hover .benefit-line {
   width: 100%;
 }
+
+.header-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-whatsapp i,
+.header-whatsapp svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
