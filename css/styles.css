@@ -4716,3 +4716,36 @@ html, body {
 .tv-channel-strip {
   transform: translateY(-30px);
 }
+
+/* Controle de zoom do mapa */
+.leaflet-control-zoom a {
+  width: 24px !important;
+  height: 24px !important;
+  line-height: 24px !important;
+  font-size: 15px !important;
+  border-radius: 8px !important;
+  background: #ffffff !important;
+  color: #111111 !important;
+  border: 1px solid rgba(0,0,0,.12) !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,.12) !important;
+}
+
+.leaflet-control-zoom a:first-child {
+  border-radius: 8px 8px 4px 4px !important;
+}
+
+.leaflet-control-zoom a:last-child {
+  border-radius: 4px 4px 8px 8px !important;
+}
+
+/* Tema escuro */
+body.dark .leaflet-control-zoom a,
+body[data-theme="dark"] .leaflet-control-zoom a {
+  background: #151515 !important;
+  color: #ffffff !important;
+  border-color: rgba(255,255,255,.15) !important;
+}
+
+.leaflet-control-zoom a {
+ width: 28px...
+}
