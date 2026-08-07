@@ -3612,3 +3612,120 @@ html[data-theme="light"] .hero-lead {
 html[data-theme="light"] .hero-proof {
   color: #435248 !important;
 }
+
+/* Força um fundo escuro moderno na seção de canais de TV */
+.channels-section,
+.tv-channels-section,
+[class*="channel"] {
+  background: #08110b !important;
+  color: #f5f7f6 !important;
+}
+
+/* Garante que os textos descritivos e títulos internos fiquem legíveis no modo escuro */
+.channels-section h2,
+.channels-section p,
+.tv-channels-section h2,
+.tv-channels-section p {
+  color: #f5f7f6 !important;
+}
+
+.channels-section .section-heading p,
+.tv-channels-section .section-heading p {
+  color: #b3beb5 !important;
+}
+
+/* Seção de canais adaptável ao tema */
+.channels-section,
+.tv-channels-section,
+[class*="channel"] {
+  background: var(--surface) !important;
+  color: var(--foreground) !important;
+}
+
+/* Modo Claro: Fundo claro e textos escuros */
+html[data-theme="light"] .channels-section,
+html[data-theme="light"] .tv-channels-section,
+html[data-theme="light"] [class*="channel"] {
+  background: var(--background) !important;
+  color: var(--foreground) !important;
+}
+
+html[data-theme="light"] .channels-section .section-heading p,
+html[data-theme="light"] .tv-channels-section .section-heading p {
+  color: var(--muted) !important;
+}
+
+/* Modo Escuro: Fundo escuro e textos claros */
+html[data-theme="dark"] .channels-section,
+html[data-theme="dark"] .tv-channels-section,
+html[data-theme="dark"] [class*="channel"] {
+  background: #08110b !important;
+  color: #f5f7f6 !important;
+}
+
+
+
+/* Aplica o efeito neon brilhante no tema escuro */
+html[data-theme="dark"] .header-whatsapp,
+html[data-theme="dark"] .round-button {
+  animation: pulse-whatsapp-glow 2s infinite ease-in-out !important;
+}
+
+/* Pausa no hover */
+html[data-theme="dark"] .header-whatsapp:hover,
+html[data-theme="dark"] .round-button:hover {
+  animation-play-state: paused !important;
+}
+
+/* Altera a cor dos traços e destaques do menu para o tom #05a405 no tema escuro */
+html[data-theme="dark"] header a::after,
+html[data-theme="dark"] .navbar a::after,
+html[data-theme="dark"] .nav-link::after,
+html[data-theme="dark"] header a:hover,
+html[data-theme="dark"] .navbar a:hover,
+html[data-theme="dark"] .nav-link:hover {
+  border-color: #05a405 !important;
+  background-color: #05a405 !important;
+  color: #05a405 !important;
+}
+
+html[data-theme="dark"] header a,
+html[data-theme="dark"] .navbar a,
+html[data-theme="dark"] .nav-link {
+  text-decoration-color: #05a405 !important;
+}
+
+/* Remove o fundo em forma de quadrado/caixa verde ao passar o mouse no menu no tema escuro */
+html[data-theme="dark"] header a:hover,
+html[data-theme="dark"] .navbar a:hover,
+html[data-theme="dark"] .nav-link:hover {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* Garante que apenas o texto e o traço fiquem com a cor #05a405 */
+html[data-theme="dark"] header a:hover,
+html[data-theme="dark"] .navbar a:hover,
+html[data-theme="dark"] .nav-link:hover {
+  color: #05a405 !important;
+}
+
+/* Altera a cor do texto e do traço/destaque para #05a405 no tema claro ao passar o mouse ou quando estiver ativo */
+html[data-theme="light"] header a:hover,
+html[data-theme="light"] .navbar a:hover,
+html[data-theme="light"] .nav-link:hover,
+html[data-theme="light"] header a.active,
+html[data-theme="light"] .navbar a.active,
+html[data-theme="light"] .nav-link.active {
+  color: #05a405 !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* Garante que o traço ou indicador abaixo da palavra também use o verde #05a405 no tema claro */
+html[data-theme="light"] header a::after,
+html[data-theme="light"] .navbar a::after,
+html[data-theme="light"] .nav-link::after {
+  background-color: #05a405 !important;
+  border-color: #05a405 !important;
+}
