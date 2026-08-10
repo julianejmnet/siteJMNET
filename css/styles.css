@@ -1038,10 +1038,10 @@ html[data-theme="dark"] .desktop-navigation a:hover {
 
 .plans-section::before {
   position: absolute;
-  width: 480px;
-  height: 480px;
-  top: -200px;
-  left: -260px;
+  width: 300px;
+  height: 300px;
+  top: -300px;
+  left: -300px;
   border-radius: 50%;
   background: #0d140d;
   filter: blur(70px);
@@ -1049,6 +1049,8 @@ html[data-theme="dark"] .desktop-navigation a:hover {
 }
 
 .plans-grid {
+  position: relative;
+  top: -150px;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
@@ -1620,6 +1622,7 @@ html[data-theme="dark"] .plan-speed strong {
   align-items: center;
   gap: 0.35rem;
 }
+
 
 .legend-line {
   width: 20px;
@@ -3242,7 +3245,8 @@ html:not([data-theme]) .brand-logo-dark {
 .tv-channel-strip {
   position: relative;
   overflow: hidden;
-  padding-block: clamp(3.1rem, 6vw, 5rem);
+  padding-top: 0;
+  padding-bottom: clamp(3.1rem, 6vw, 5rem);
   background:
     radial-gradient(circle at 12% 50%, rgba(65, 255, 106, 0.15), transparent 24%),
     radial-gradient(circle at 90% 15%, rgba(0, 212, 255, 0.11), transparent 25%),
@@ -3274,7 +3278,7 @@ html:not([data-theme]) .brand-logo-dark {
 
 .tv-channel-heading h2 {
   max-width: 780px;
-  margin-top: 0.55rem;
+  margin-top: 0.100rem;
   font-size: Gotham(2rem, 4.6vw, 4rem);
   line-height: 1;
   letter-spacing: -0.055em;
@@ -4874,4 +4878,72 @@ body[data-theme="dark"] .leaflet-control-zoom a {
   width: 18px;
   height: 18px;
   flex-shrink: 0;
+}
+
+/* ==========================================
+   APENAS O RODAPÉ - VERDE ACINZENTADO
+   ========================================== */
+
+html body .footer {
+    background: #141916 !important;
+}
+
+/* Textos normais do rodapé */
+html body .footer p,
+html body .footer a,
+html body .footer button,
+html body .footer span {
+    color: #929d96 !important;
+}
+
+/* Títulos: NAVEGAÇÃO, ATENDIMENTO, LOCALIZAÇÃO, LEGAL */
+html body .footer h2 {
+    color: #d2d7d4 !important;
+}
+
+/* Texto "Internet Banda Larga..." */
+html body .footer .footer-brand > strong {
+    color: #aeb7b1 !important;
+}
+
+/* Logo JMNET */
+html body .footer .brand-wordmark {
+    color: #d2d7d4 !important;
+}
+
+html body .footer .brand-wordmark b {
+    color: #8a968e !important;
+}
+
+/* Links em destaque */
+html body .footer a:hover,
+html body .footer button:hover {
+    color: #b8c0bb !important;
+}
+
+/* Ícones do rodapé */
+html body .footer svg {
+    color: #929d96 !important;
+}
+
+/* Linha inferior */
+html body .footer .footer-bottom {
+    border-top-color: #303832 !important;
+    color: #737e77 !important;
+}
+
+/* Copyright e CNPJ */
+html body .footer .footer-bottom * {
+    color: #737e77 !important;
+}
+
+/* SUBIR OS CARDS DOS PLANOS */
+html body .plans-section .plans-grid .plan-card {
+    position: relative !important;
+    top: -1px !important;
+}
+
+.commercial-note {
+    position: relative !important;
+    top: -100px !important;
 }
