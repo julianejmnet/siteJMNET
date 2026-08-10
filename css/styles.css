@@ -3889,6 +3889,7 @@ html[data-theme="dark"] .support-preview-balloon::after {
 }
 
 /* A Janela de Chat (Pop-up) que aparece ao passar o mouse */
+/* Janela de Chat */
 .jmnet-wa-chatbox {
   position: absolute;
   bottom: 75px;
@@ -3898,16 +3899,48 @@ html[data-theme="dark"] .support-preview-balloon::after {
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   overflow: hidden;
-  display: none; /* Oculto por padrão */
+
+  /* Fechada por padrão */
+  display: none;
+
   flex-direction: column;
   animation: jmnetFadeIn 0.3s ease-in-out;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-/* Mostra a janela quando o mouse está em cima de todo o container */
-.jmnet-whatsapp-widget:hover .jmnet-wa-chatbox {
+/* Aberta quando clicar no robô */
+.jmnet-wa-chatbox.active {
   display: flex;
 }
+
+/* No computador: também abre ao passar o mouse */
+@media (min-width: 769px) {
+  .jmnet-whatsapp-widget:hover .jmnet-wa-chatbox {
+    display: flex;
+  }
+}
+
+.jmnet-wa-button {
+  width: 60px;
+  height: 60px;
+  background-color: #05a405;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+
+  /* Remove o estilo padrão do botão */
+  border: none;
+  padding: 0;
+  appearance: none;
+}
+
+/* Mostra a janela quando o mouse está em cima de todo o container */
+
 
 /* Cabeçalho do Chat */
 .jmnet-wa-header {
@@ -5000,294 +5033,6 @@ html body .plans-section .plans-grid .plan-card {
 
   100% {
     transform: scale(1);
-  }
-}
-
-/* =====================================================
-   RESPONSIVIDADE MOBILE - JMNET
-   ===================================================== */
-
-@media (max-width: 768px) {
-
-  /* Evita qualquer elemento criando rolagem horizontal */
-  html,
-  body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-  }
-
-  * {
-    box-sizing: border-box;
-  }
-
-  /* Containers */
-  .container,
-  .section-inner,
-  .content-container {
-    width: 100%;
-    max-width: 100%;
-    padding-left: 18px;
-    padding-right: 18px;
-  }
-
-
-  /* =========================
-     HERO
-     ========================= */
-
-  .hero {
-    min-height: auto;
-    padding: 80px 18px 45px;
-  }
-
-  .hero h1 {
-    font-size: clamp(2.2rem, 11vw, 3.5rem);
-    line-height: 0.98;
-    letter-spacing: -0.045em;
-  }
-
-  .hero p {
-    font-size: 0.95rem;
-    line-height: 1.55;
-  }
-
-
-  /* =========================
-     PLANOS
-     ========================= */
-
-  .plans-grid,
-  .plans,
-  .pricing-grid {
-    grid-template-columns: 1fr !important;
-    gap: 16px;
-  }
-
-  .plan-card {
-    width: 100%;
-    min-width: 0;
-    padding: 22px;
-  }
-
-  .plan-card h3 {
-    font-size: 1.35rem;
-  }
-
-  .plan-price {
-    font-size: 2.5rem;
-  }
-
-  .plan-card .button,
-  .plan-card a {
-    width: 100%;
-    justify-content: center;
-  }
-
-
-  /* =========================
-     CANAIS
-     ========================= */
-
-  .tv-channel-strip {
-    padding-block: 2.5rem;
-  }
-
-  .tv-channel-heading {
-    display: block;
-    margin-bottom: 1rem;
-  }
-
-  .tv-channel-heading h2 {
-    font-size: clamp(2rem, 9vw, 3rem);
-  }
-
-  .tv-channel-heading p {
-    font-size: 0.9rem;
-    line-height: 1.5;
-  }
-
-  .tv-marquee {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: auto;
-  }
-
-  .tv-channel-list {
-    gap: 12px;
-  }
-
-  .tv-channel-item {
-    min-width: 145px;
-    width: 145px;
-    padding: 14px;
-  }
-
-  .tv-channel-item img {
-    width: 85px;
-    height: 52px;
-  }
-
-  .tv-channel-item figcaption {
-    font-size: 0.68rem;
-  }
-
-
-  /* =========================
-     MAPA
-     ========================= */
-
-  .map-column {
-    width: 100%;
-    min-height: 400px;
-    height: 400px;
-    border-radius: 18px;
-  }
-
-  .coverage-map {
-    width: 100%;
-    min-height: 400px;
-    height: 400px;
-  }
-
-  .map-chip {
-    top: 10px;
-    left: 10px;
-    font-size: 0.68rem;
-    padding: 0.45rem 0.65rem;
-  }
-
-  .map-legend {
-    right: 10px;
-    bottom: 10px;
-    max-width: calc(100% - 20px);
-    font-size: 0.6rem;
-    padding: 0.45rem 0.55rem;
-  }
-
-
-  /* =========================
-     BENEFÍCIOS
-     ========================= */
-
-  .benefits-bento {
-    grid-template-columns: 1fr !important;
-    gap: 14px;
-  }
-
-  .benefit-card,
-  .benefit-wide {
-    width: 100%;
-    min-width: 0;
-    padding: 20px;
-  }
-
-  .benefit-card h3 {
-    font-size: 1.05rem;
-  }
-
-  .benefit-card p {
-    font-size: 0.85rem;
-    line-height: 1.55;
-  }
-
-  .benefit-icon {
-    width: 42px;
-    height: 42px;
-  }
-
-
-  /* =========================
-     SEÇÕES
-     ========================= */
-
-  section {
-    overflow: hidden;
-  }
-
-  section h2 {
-    font-size: clamp(1.8rem, 8vw, 2.7rem);
-  }
-
-
-  /* =========================
-     RODAPÉ
-     ========================= */
-
-  footer {
-    padding: 40px 18px 25px;
-  }
-
-  .footer-grid,
-  .footer-columns {
-    grid-template-columns: 1fr !important;
-    gap: 28px;
-  }
-
-  footer p,
-  footer a {
-    overflow-wrap: anywhere;
-  }
-
-
-  /* =========================
-     BOTÕES
-     ========================= */
-
-  .button,
-  button {
-    min-height: 46px;
-  }
-
-
-  /* =========================
-     CHAT
-     ========================= */
-
-  .chat-widget,
-  .chatbot,
-  .whatsapp-widget {
-    max-width: calc(100vw - 24px);
-  }
-}
-
-
-/* Celulares menores */
-@media (max-width: 480px) {
-
-  .container,
-  .section-inner,
-  .content-container {
-    padding-left: 14px;
-    padding-right: 14px;
-  }
-
-  .hero {
-    padding-top: 65px;
-  }
-
-  .hero h1 {
-    font-size: 2.15rem;
-  }
-
-  .plan-card {
-    padding: 18px;
-  }
-
-  .tv-channel-item {
-    min-width: 135px;
-    width: 135px;
-  }
-
-  .map-column,
-  .coverage-map {
-    min-height: 360px;
-    height: 360px;
-  }
-
-  .benefit-card,
-  .benefit-wide {
-    padding: 17px;
   }
 }
 
