@@ -593,7 +593,7 @@ html[data-theme="dark"] .desktop-navigation a:hover {
   opacity: 0.34;
   background-image: #081e0e;
   background-size: 54px 54px;
-  /*mask-image: radial-gradient(circle at 72% 48%, #000, transparent 68%);*/
+  mask-image: radial-gradient(circle at 72% 48%, #000, transparent 68%);
 }
 
 .network-grid::before,
