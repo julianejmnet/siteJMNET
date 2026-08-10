@@ -1050,7 +1050,7 @@ html[data-theme="dark"] .desktop-navigation a:hover {
 
 .plans-grid {
   position: relative;
-  top: -100px;
+  top: -50px;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
