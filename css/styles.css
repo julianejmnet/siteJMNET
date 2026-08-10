@@ -165,7 +165,7 @@ p {
 
 .section {
   position: relative;
-  padding-block: clamp(0rem, 0vw, 0rem);
+  padding-block: clamp(5rem, 9vw, 8.5rem);
 }
 
 .section-heading {
