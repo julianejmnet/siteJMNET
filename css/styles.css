@@ -4947,3 +4947,58 @@ html body .plans-section .plans-grid .plan-card {
     position: relative !important;
     top: -100px !important;
 }
+
+.benefit-icon {
+  color: #05a405 !important;
+}
+
+.benefit-icon svg {
+  color: #05a405 !important;
+  stroke: #05a405 !important;
+}
+
+.benefit-line {
+  display: block;
+  width: 100%;
+  height: 3px;
+  margin-top: 1rem;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    #00f700 15%,
+    #a4f1a8 50%,
+    #d2dad21f 100%
+  );
+}
+
+/* Animação dos ícones das caixas */
+.benefit-icon {
+  transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.benefit-card:hover .benefit-icon {
+  transform: translateY(-5px) scale(1.08);
+  filter: drop-shadow(0 0 8px rgba(5, 164, 5, 0.65));
+}
+
+.benefit-card:hover .benefit-icon svg {
+  animation: benefitIconPulse 0.8s ease;
+}
+
+@keyframes benefitIconPulse {
+  0% {
+    transform: scale(1);
+  }
+
+  45% {
+    transform: scale(1.15) rotate(-4deg);
+  }
+
+  70% {
+    transform: scale(1.05) rotate(3deg);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
