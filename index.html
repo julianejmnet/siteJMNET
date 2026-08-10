@@ -539,34 +539,84 @@
 
 <div class="whatsapp-float-preview">
   <span class="whatsapp-preview-title">🤖 ATENDENTE JMNET</span>
-  <span class="whatsapp-preview-text">Olá! Precisa de ajuda com os planos ou suporte?</span>
+  <span class="whatsapp-preview-text">
+    Olá! Precisa de ajuda com os planos ou suporte?
+  </span>
 </div>
 
 <div class="jmnet-whatsapp-widget">
-  <div class="jmnet-wa-chatbox">
+
+  <div class="jmnet-wa-chatbox" id="jmnetWaChatbox">
+
     <div class="jmnet-wa-header">
-      <div class="jmnet-wa-avatar"><span class="floating-mascot"><img src="media/mascote-avatar.webp" alt="" aria-hidden="true"></div>
+      <div class="jmnet-wa-avatar">
+        <span class="floating-mascot">
+          <img src="media/mascote-avatar.webp" alt="" aria-hidden="true">
+        </span>
+      </div>
+
       <div class="jmnet-wa-info">
         <h4>Atendente JMNET</h4>
         <span>Online</span>
       </div>
     </div>
+
     <div class="jmnet-wa-body">
       <div class="jmnet-wa-message">
         👤 Agente Pedro - Suporte N1 iniciou o seu atendimento e dará continuidade à sua solicitação.
         <div class="jmnet-wa-time">Agora mesmo</div>
       </div>
     </div>
-    <div class="jmnet-wa-footer">
-      <a href="https://api.whatsapp.com/send/?phone=557330269305&text=Ol%C3%A1%21+Quero+conhecer+os+planos+da+JMNET.&type=phone_number&app_absent=0" target="_blank" class="jmnet-wa-start-btn">Iniciar Conversa</a>
-    </div>
-  </div>
 
-  <a href="https://api.whatsapp.com/send/?phone=557330269305&text=Ol%C3%A1%21+Quero+conhecer+os+planos+da+JMNET.&type=phone_number&app_absent=0" target="_blank" class="jmnet-wa-button" aria-label="Fale conosco no WhatsApp">
-    <img src="media/mascote-avatar.webp" alt="Atendente JMNET" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+    <div class="jmnet-wa-footer">
+  <a
+    href="https://api.whatsapp.com/send/?phone=557330269305&text=Ol%C3%A1%21+Quero+conhecer+os+planos+da+JMNET.&type=phone_number&app_absent=0"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="jmnet-wa-start-btn"
+  >
+    Iniciar Conversa
   </a>
 </div>
 
+  </div>
 
+  <!-- Agora é um botão, e não um link para o WhatsApp -->
+  <button
+  type="button"
+  class="jmnet-wa-button"
+  id="jmnetWaButton"
+  aria-label="Abrir atendimento JMNET"
+  aria-expanded="false"
+>
+  <img
+    src="media/mascote-avatar.webp"
+    alt="Atendente JMNET"
+    style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;"
+  >
+</button>
+
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const button = document.getElementById("jmnetWaButton");
+  const chatbox = document.querySelector(".jmnet-wa-chatbox");
+
+  if (!button || !chatbox) return;
+
+  button.addEventListener("click", function (event) {
+    event.preventDefault();
+    event.stopPropagation();
+
+    chatbox.classList.toggle("active");
+
+    button.setAttribute(
+      "aria-expanded",
+      chatbox.classList.contains("active") ? "true" : "false"
+    );
+  });
+});
+</script>
 </body>
 </html>
