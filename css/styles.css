@@ -5290,3 +5290,69 @@ html body .plans-section .plans-grid .plan-card {
     padding: 17px;
   }
 }
+
+/* ===== CORREÇÃO MOBILE ===== */
+
+@media (max-width: 768px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden !important;
+  }
+
+  body {
+    position: relative;
+  }
+
+  main,
+  section,
+  header,
+  footer {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  img,
+  video,
+  iframe {
+    max-width: 100%;
+  }
+
+  /* Evita elementos grandes estourando a tela */
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* Canais */
+  .tv-channel-strip {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .tv-marquee {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Mapa */
+  .map-column {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Benefícios */
+  .benefits-bento {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .benefit-card {
+    max-width: 100%;
+  }
+}
