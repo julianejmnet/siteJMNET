@@ -1050,7 +1050,7 @@ html[data-theme="dark"] .desktop-navigation a:hover {
 
 .plans-grid {
   position: relative;
-  top: -150px;
+  top: -100px;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
@@ -3285,7 +3285,7 @@ html:not([data-theme]) .brand-logo-dark {
 }
 
 .tv-channel-heading p {
-  color: #a9bbae;
+  color: #ffff;
   line-height: 1.7;
 }
 
