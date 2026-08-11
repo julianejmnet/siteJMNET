@@ -3278,7 +3278,7 @@ html:not([data-theme]) .brand-logo-dark {
 
 .tv-channel-heading h2 {
   max-width: 780px;
-  margin-top: 0.100rem;
+  margin-top: 0.70rem;
   font-size: Gotham(2rem, 4.6vw, 4rem);
   line-height: 1;
   letter-spacing: -0.055em;
@@ -4978,7 +4978,7 @@ html body .plans-section .plans-grid .plan-card {
 
 .commercial-note {
     position: relative !important;
-    top: -25px !important;
+    top: -10px !important;
 }
 
 .benefit-icon {
