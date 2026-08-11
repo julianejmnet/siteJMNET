@@ -5158,3 +5158,17 @@ section:first-of-type {
     bottom: 105px;
     transform: translateX(-50%);
 }
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.04);
+  }
+}
+
+a {
+  animation: pulse 2s ease-in-out infinite;
+}
