@@ -5159,16 +5159,29 @@ section:first-of-type {
     transform: translateX(-50%);
 }
 
-@keyframes pulse {
-  0%, 100% {
+@keyframes pulseGreen {
+  0% {
     transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.65);
   }
 
   50% {
-    transform: scale(1.04);
+    transform: scale(1.03);
+    box-shadow: 0 0 0 8px rgba(37, 211, 102, 0.15);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 16px rgba(37, 211, 102, 0);
   }
 }
 
-a {
-  animation: pulse 2s ease-in-out infinite;
+.btn-pulse {
+  display: inline-block;
+  animation: pulseGreen 2s ease-out infinite;
+  border-radius: 8px;
+}
+
+.btn-pulse:hover {
+  animation-play-state: paused;
 }
