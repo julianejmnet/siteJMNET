@@ -5101,3 +5101,16 @@ html body .plans-section .plans-grid .plan-card {
     max-width: 100%;
   }
 }
+
+.mobile-navigation .support-link {
+    background-color: #25D366 !important;
+    color: #ffffff !important;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-weight: 700;
+}
+
+.mobile-navigation .support-link:hover {
+    background-color: #1ebe5d !important;
+    color: #ffffff !important;
+}
