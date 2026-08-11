@@ -5134,50 +5134,38 @@ a[href*="wa.me"]:hover {
 }
 
 /* Halo verde */
-.header-whatsapp::before {
-  content: "";
-  position: absolute;
-  inset: -5px;
-  border-radius: inherit;
-  background: #25D366;
-  z-index: -1;
-  pointer-events: none;
-  animation: suporteGlow 2s ease-out infinite;
+.header-whatsapp {
+  position: relative !important;
+  z-index: 10 !important;
+  animation: suportePulseGreen 2s infinite !important;
 }
 
-/* Pulsação do botão */
-@keyframes suportePulse {
-  0%, 100% {
+@keyframes suportePulseGreen {
+  0% {
     transform: scale(1);
+    box-shadow:
+      0 0 0 0 rgba(37, 211, 102, 0.80),
+      0 0 0 0 rgba(37, 211, 102, 0.40);
   }
 
   50% {
     transform: scale(1.04);
-  }
-}
-
-/* Expansão do verde */
-@keyframes suporteGlow {
-  0% {
-    transform: scale(0.95);
-    opacity: 0.65;
-  }
-
-  70% {
-    transform: scale(1.18);
-    opacity: 0;
+    box-shadow:
+      0 0 0 6px rgba(37, 211, 102, 0.35),
+      0 0 18px 4px rgba(37, 211, 102, 0.45);
   }
 
   100% {
-    transform: scale(1.18);
-    opacity: 0;
+    transform: scale(1);
+    box-shadow:
+      0 0 0 16px rgba(37, 211, 102, 0),
+      0 0 30px 12px rgba(37, 211, 102, 0);
   }
 }
 
-/* Garante o verde também no modo escuro */
-.header-whatsapp::before {
-  background: #25D366 !important;
+/* Mantém o efeito no modo escuro */
+.dark .header-whatsapp,
+.dark-mode .header-whatsapp,
+[data-theme="dark"] .header-whatsapp {
+  animation: suportePulseGreen 2s infinite !important;
 }
-
-
-
