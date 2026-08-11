@@ -5139,3 +5139,22 @@ a[href*="wa.me"]:hover {
     }
 }
 
+section:first-of-type {
+    height: 750px !important;
+    min-height: 750px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.robo-sombra {
+    position: absolute;
+    width: 120px;
+    height: 18px;
+    background: rgba(0, 0, 0, 0.28);
+    border-radius: 50%;
+    filter: blur(8px);
+    z-index: 1;
+    left: 70%;
+    bottom: 105px;
+    transform: translateX(-50%);
+}
