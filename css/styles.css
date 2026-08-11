@@ -5159,17 +5159,32 @@ section:first-of-type {
     transform: translateX(-50%);
 }
 
-@keyframes pulseGreen {
-  0% {
+@keyframes pulseButton {
+  0%, 100% {
     transform: scale(1);
   }
 
   50% {
-    transform: scale(1.03);
+    transform: scale(1.035);
+  }
+}
+
+@keyframes greenPulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.65;
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.65);
+  }
+
+  70% {
+    transform: scale(1.18);
+    opacity: 0;
+    box-shadow: 0 0 0 12px rgba(37, 211, 102, 0);
   }
 
   100% {
-    transform: scale(1);
+    transform: scale(1.18);
+    opacity: 0;
   }
 }
 
@@ -5177,39 +5192,33 @@ section:first-of-type {
   position: relative;
   display: inline-block;
   z-index: 1;
-  animation: pulseGreen 2s ease-in-out infinite;
+  animation: pulseButton 2s ease-in-out infinite;
 }
 
-/* Efeito verde ao redor */
+/* Halo verde */
 .btn-pulse::before {
   content: "";
   position: absolute;
-  inset: -5px;
+  inset: -4px;
   border-radius: inherit;
-  background: rgba(37, 211, 102, 0.45);
+  background: #25D366;
   z-index: -1;
-  animation: greenGlow 2s ease-out infinite;
+  pointer-events: none;
+  animation: greenPulse 2s ease-out infinite;
 }
 
-@keyframes greenGlow {
-  0% {
-    transform: scale(0.95);
-    opacity: 0.7;
-  }
-
-  70% {
-    transform: scale(1.15);
-    opacity: 0;
-  }
-
-  100% {
-    transform: scale(1.15);
-    opacity: 0;
-  }
+/* Garante o efeito também no modo escuro */
+.dark .btn-pulse::before,
+.dark-mode .btn-pulse::before,
+[data-theme="dark"] .btn-pulse::before {
+  background: #25D366;
+  box-shadow: 0 0 12px rgba(37, 211, 102, 0.7);
 }
 
+/* Ao passar o mouse */
 .btn-pulse:hover {
   animation-play-state: paused;
+  transform: scale(1.05);
 }
 
 .btn-pulse:hover::before {
