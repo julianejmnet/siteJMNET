@@ -5126,60 +5126,46 @@ a[href*="wa.me"]:hover {
     box-shadow: 0 8px 20px rgba(37, 211, 102, 0.35);
 }
 
-/* Pulso suave */
+.header-whatsapp {
+  position: relative !important;
+  z-index: 1 !important;
+  overflow: visible !important;
+  animation: suportePulse 2s ease-in-out infinite !important;
+}
+
+/* Halo verde */
+.header-whatsapp::before {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  border-radius: inherit;
+  background: #25D366;
+  z-index: -1;
+  pointer-events: none;
+  animation: suporteGlow 2s ease-out infinite;
+}
+
+/* Pulsação do botão */
 @keyframes suportePulse {
-    0%, 100% {
-        transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.45);
-    }
-
-    50% {
-        transform: scale(1.03);
-        box-shadow: 0 0 0 8px rgba(37, 211, 102, 0);
-    }
-}
-
-section:first-of-type {
-    height: 750px !important;
-    min-height: 750px !important;
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-}
-
-.robo-sombra {
-    position: absolute;
-    width: 120px;
-    height: 18px;
-    background: rgba(0, 0, 0, 0.28);
-    border-radius: 50%;
-    filter: blur(8px);
-    z-index: 1;
-    left: 70%;
-    bottom: 105px;
-    transform: translateX(-50%);
-}
-
-@keyframes pulseButton {
   0%, 100% {
     transform: scale(1);
   }
 
   50% {
-    transform: scale(1.035);
+    transform: scale(1.04);
   }
 }
 
-@keyframes greenPulse {
+/* Expansão do verde */
+@keyframes suporteGlow {
   0% {
     transform: scale(0.95);
     opacity: 0.65;
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.65);
   }
 
   70% {
     transform: scale(1.18);
     opacity: 0;
-    box-shadow: 0 0 0 12px rgba(37, 211, 102, 0);
   }
 
   100% {
@@ -5188,40 +5174,8 @@ section:first-of-type {
   }
 }
 
-.btn-pulse {
-  position: relative;
-  display: inline-block;
-  z-index: 1;
-  animation: pulseButton 2s ease-in-out infinite;
+/* Garante o verde também no modo escuro */
+.header-whatsapp::before {
+  background: #25D366 !important;
 }
 
-/* Halo verde */
-.btn-pulse::before {
-  content: "";
-  position: absolute;
-  inset: -4px;
-  border-radius: inherit;
-  background: #25D366;
-  z-index: -1;
-  pointer-events: none;
-  animation: greenPulse 2s ease-out infinite;
-}
-
-/* Garante o efeito também no modo escuro */
-.dark .btn-pulse::before,
-.dark-mode .btn-pulse::before,
-[data-theme="dark"] .btn-pulse::before {
-  background: #25D366;
-  box-shadow: 0 0 12px rgba(37, 211, 102, 0.7);
-}
-
-/* Ao passar o mouse */
-.btn-pulse:hover {
-  animation-play-state: paused;
-  transform: scale(1.05);
-}
-
-.btn-pulse:hover::before {
-  animation-play-state: paused;
-  opacity: 0;
-}
