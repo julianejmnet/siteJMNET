@@ -5151,8 +5151,8 @@ a[href*="wa.me"]:hover {
   50% {
     transform: scale(1.04);
     box-shadow:
-      0 0 0 6px rgba(37, 211, 102, 0.35),
-      0 0 18px 4px rgba(37, 211, 102, 0.45);
+      0 0 0 6px rgba(37, 211, 102, 0.65),
+      0 0 18px 4px rgba(37, 211, 102, 0.70);
   }
 
   100% {
