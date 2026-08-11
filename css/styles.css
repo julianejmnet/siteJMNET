@@ -5139,9 +5139,3 @@ a[href*="wa.me"]:hover {
     }
 }
 
-section:first-of-type {
-    height: 750px !important;
-    min-height: 750px !important;
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-}
