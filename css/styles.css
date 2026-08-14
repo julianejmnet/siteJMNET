@@ -3723,8 +3723,8 @@ html[data-theme="dark"].round-button {
 }
 
 /* Pausa no hover */
-html[data-theme="dark"] .header-whatsapp:hover,
-html[data-theme="dark"] .round-button:hover {
+html[data-theme="dark"].header-whatsapp:hover,
+html[data-theme="dark"].round-button:hover {
   animation-play-state: paused !important;
 }
 
