@@ -3293,9 +3293,9 @@ html:not([data-theme]) .brand-logo-dark {
   position: relative;
   z-index: 2;
   overflow: hidden;
-  padding-block: 0.55rem;
-  -webkit-mask-image: linear-gradient(90deg, transparent, #fffdfd 100%, #fffdfd 100%, transparent);
-  mask-image: linear-gradient(90deg, transparent, #fffdfd 100%, #fffdfd 100%, transparent);
+   /*padding-block: 0.55rem;*/
+   /*-webkit-mask-image: linear-gradient(90deg, transparent, #fffdfd 100%, #fffdfd 100%, transparent);*/
+   /*mask-image: linear-gradient(90deg, transparent, #fffdfd 100%, #fffdfd 100%, transparent);*/
 }
 
 .tv-marquee-track {
