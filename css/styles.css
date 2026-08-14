@@ -942,7 +942,7 @@ html[data-theme="dark"] .desktop-navigation a:hover {
 
 .app-section {
   padding-block: 1.4rem;
-  border-top: 1px solid #1c3a24;
+  border-top: 0px solid #1c3a24;
   background: #0d140d;
   color: #fff;
 }
