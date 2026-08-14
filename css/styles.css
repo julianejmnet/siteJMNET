@@ -3717,8 +3717,8 @@ html[data-theme="dark"] [class*="channel"] {
 
 
 /* Aplica o efeito neon brilhante no tema escuro */
-html[data-theme="dark"] .header-whatsapp,
-html[data-theme="dark"] .round-button {
+html[data-theme="dark"].header-whatsapp,
+html[data-theme="dark"].round-button {
   animation: pulse-whatsapp-glow 2s infinite ease-in-out !important;
 }
 
