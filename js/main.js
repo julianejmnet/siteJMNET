@@ -260,7 +260,7 @@
             ? "moon"
             : preference === "light"
               ? "sun"
-              : "laptop";
+              : "moon";
 
         const label =
           preference === "dark"
