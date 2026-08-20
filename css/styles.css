@@ -5659,3 +5659,81 @@ html[data-theme="dark"] .company-principles .principle-card h3 {
 .company-principles .principle-card .principle-label {
     color: var(--muted) !important;
 }
+
+/* ==========================================================
+   LAYOUT EMPILHADO: CAIXA EM CIMA, BOTÃO EMBAIXO
+   ========================================================== */
+
+.jmnet-wa-footer {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 14px !important;
+    background: var(--surface-soft, #f4f6f5) !important;
+    border-top: 1px solid var(--line, rgba(0, 0, 0, 0.08)) !important;
+}
+
+html[data-theme="dark"] .jmnet-wa-footer {
+    background: #0d140d !important;
+    border-top-color: rgba(5, 164, 5, 0.2) !important;
+}
+
+/* Transforma o formulário em coluna (um em cima do outro) */
+.jmnet-wa-form {
+    display: flex !important;
+    flex-direction: column !important; /* Coloca o botão embaixo da caixa */
+    gap: 10px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+}
+
+/* CAIXA DE TEXTO (Larga e confortável) */
+.jmnet-wa-form input[type="text"],
+.jmnet-wa-form input {
+    width: 100% !important;
+    height: 46px !important;
+    padding: 0 16px !important;
+    border-radius: 12px !important;
+    border: 2px solid var(--line, #d1d9d5) !important;
+    background: var(--surface, #ffffff) !important;
+    color: var(--foreground, #0e1911) !important;
+    font-size: 0.95rem !important;
+    outline: none !important;
+    box-sizing: border-box !important;
+    pointer-events: auto !important;
+    user-select: text !important;
+}
+
+html[data-theme="dark"] .jmnet-wa-form input[type="text"],
+html[data-theme="dark"] .jmnet-wa-form input {
+    background: #142217 !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    color: #ffffff !important;
+}
+
+.jmnet-wa-form input:focus {
+    border-color: #05a405 !important;
+    box-shadow: 0 0 0 3px rgba(5, 164, 5, 0.25) !important;
+}
+
+/* BOTÃO DE ENVIAR (Largo, ocupando 100% da largura embaixo) */
+.jmnet-wa-start-btn {
+    width: 100% !important;
+    height: 44px !important;
+    background: #05a405 !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 12px !important;
+    font-weight: 700 !important;
+    font-size: 0.9rem !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+    transition: background 0.2s ease !important;
+}
+
+.jmnet-wa-start-btn:hover {
+    background: #048b04 !important;
+}
