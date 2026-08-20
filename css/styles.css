@@ -1061,6 +1061,8 @@ html[data-theme="dark"] .desktop-navigation a:hover {
   font-size: 0.93rem;
 }
 
+
+
 .plans-section {
   overflow: hidden;
 }
@@ -5736,4 +5738,29 @@ html[data-theme="dark"] .jmnet-wa-form input {
 
 .jmnet-wa-start-btn:hover {
     background: #048b04 !important;
+}
+
+/* Força a cor a se manter sólida e não mudar para verde no hover em qualquer tema */
+.plan-card--lime .button-primary:hover,
+body html body .plan-card--lime a.button.button-primary:hover {
+  background: #56c56a !important;
+  background-color: #56c56a !important;
+  border-color: #56c56a !important;
+  color: #ffffff !important;
+}
+
+.plan-card--cyan .button-primary:hover,
+body html body .plan-card--cyan a.button.button-primary:hover {
+  background: #00d4ff !important;
+  background-color: #00d4ff !important;
+  border-color: #00d4ff !important;
+  color: #ffffff !important;
+}
+
+.plan-card--violet .button-primary:hover,
+body html body .plan-card--violet a.button.button-primary:hover {
+  background: #8b5cf6 !important;
+  background-color: #8b5cf6 !important;
+  border-color: #8b5cf6 !important;
+  color: #ffffff !important;
 }
