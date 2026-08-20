@@ -575,40 +575,46 @@
       </div>
     </div>
 
-    <div class="jmnet-wa-body">
+    <!-- Adicionado o id="jmnetWaBody" aqui -->
+    <div class="jmnet-wa-body" id="jmnetWaBody">
       <div class="jmnet-wa-message">
         👤 Agente Pedro - Suporte N1 iniciou o seu atendimento e dará continuidade à sua solicitação.
         <div class="jmnet-wa-time">Agora mesmo</div>
       </div>
     </div>
 
+    <!-- O link antigo virou um FORMULÁRIO aqui -->
     <div class="jmnet-wa-footer">
-  <a
-    href="https://api.whatsapp.com/send/?phone=557330269305&text=Ol%C3%A1%21+Quero+conhecer+os+planos+da+JMNET.&type=phone_number&app_absent=0"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="jmnet-wa-start-btn"
-  >
-    Iniciar Conversa
-  </a>
-</div>
+      <form id="jmnetWaForm" class="jmnet-wa-form">
+        <input 
+          type="text" 
+          id="jmnetClientInput" 
+          placeholder="Digite sua dúvida aqui..." 
+          required 
+          autocomplete="off"
+        >
+        <button type="submit" class="jmnet-wa-start-btn">
+          Iniciar Conversa
+        </button>
+      </form>
+    </div>
 
   </div>
 
-  <!-- Agora é um botão, e não um link para o WhatsApp -->
+  <!-- Botão com o mascote -->
   <button
-  type="button"
-  class="jmnet-wa-button"
-  id="jmnetWaButton"
-  aria-label="Abrir atendimento JMNET"
-  aria-expanded="false"
->
-  <img
-    src="media/personagem/mascote-avatar.webp"
-    alt="Atendente JMNET"
-    style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;"
+    type="button"
+    class="jmnet-wa-button"
+    id="jmnetWaButton"
+    aria-label="Abrir atendimento JMNET"
+    aria-expanded="false"
   >
-</button>
+    <img
+      src="media/personagem/mascote-avatar.webp"
+      alt="Atendente JMNET"
+      style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;"
+    >
+  </button>
 
 </div>
 
@@ -628,22 +634,58 @@
 </html>
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const button = document.getElementById("jmnetWaButton");
-  const chatbox = document.querySelector(".jmnet-wa-chatbox");
+document.addEventListener("DOMContentLoaded", () => {
+  const waButton = document.getElementById("jmnetWaButton");
+  const waChatbox = document.getElementById("jmnetWaChatbox");
+  const waForm = document.getElementById("jmnetWaForm");
+  const clientInput = document.getElementById("jmnetClientInput");
+  const waBody = document.getElementById("jmnetWaBody");
 
-  if (!button || !chatbox) return;
+  let hasGreeted = false;
 
-  button.addEventListener("click", function (event) {
-    event.preventDefault();
-    event.stopPropagation();
+  // Garante que começa fechado
+  if (waChatbox && !waChatbox.style.display) {
+    waChatbox.style.display = "none";
+  }
 
-    chatbox.classList.toggle("active");
+  // Abrir/Fechar o chat e mandar a mensagem interativa do Agente
+  waButton.addEventListener("click", () => {
+    const isVisible = waChatbox.style.display === "block";
+    waChatbox.style.display = isVisible ? "none" : "block";
+    waButton.setAttribute("aria-expanded", !isVisible);
 
-    button.setAttribute(
-      "aria-expanded",
-      chatbox.classList.contains("active") ? "true" : "false"
-    );
+    if (!isVisible && !hasGreeted) {
+      hasGreeted = true;
+      
+      // Simula o Agente Pedro interagindo após 800ms
+      setTimeout(() => {
+        const interactiveMsg = document.createElement("div");
+        interactiveMsg.className = "jmnet-wa-message";
+        interactiveMsg.innerHTML = `
+          💬 Olá! Qual plano ou dúvida você gostaria de consultar hoje?
+          <div class="jmnet-wa-time">Agora mesmo</div>
+        `;
+        waBody.appendChild(interactiveMsg);
+        waBody.scrollTop = waBody.scrollHeight;
+      }, 800);
+    }
+  });
+
+  // Envia o texto digitado direto para o WhatsApp da JMNET
+  waForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const duda = clientInput.value.trim();
+    if (!duda) return;
+
+    const phoneNumber = "557330269305";
+    const text = `Olá! Vim pelo site da JMNET. Minha dúvida/solicitação é:\n\n${duda}`;
+    const encodedText = encodeURIComponent(text);
+
+    const whatsappUrl = `https://api.whatsapp.com/send/?phone=${phoneNumber}&text=${encodedText}&type=phone_number&app_absent=0`;
+    window.open(whatsappUrl, "_blank");
+
+    clientInput.value = "";
   });
 });
 </script>
