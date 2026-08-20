@@ -5544,4 +5544,118 @@ html[data-theme="dark"][data-contrast="high"] {
     padding: 1.5rem !important;
   }
 }
- 
+
+/* ==========================================================
+   EFEITO VERDE E TAMANHOS SEPARADOS PARA OS CARDS (MISSÃO, VISÃO, VALORES)
+   ========================================================== */
+
+/* 1. Estilo base compartilhado para todos os cards */
+.company-principles .principle-card {
+    background: #0d140d !important;
+    border: 1px solid rgba(5, 164, 5, 0.3) !important;
+    border-top: 5px solid #05a405 !important;
+    border-radius: var(--radius-lg, 34px) !important;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25) !important;
+    transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease !important;
+}
+
+/* Efeito Hover (Brilho verde ao passar o mouse) */
+.company-principles .principle-card:hover {
+    border-color: #05a405 !important;
+    box-shadow: 0 28px 70px rgba(5, 164, 5, 0.3) !important;
+    transform: translateY(-5px) !important;
+}
+
+/* ==========================================================
+   AJUSTE DE PROPORÇÃO: LARGAS NAS LATERAIS E BAIXAS NA ALTURA
+   ========================================================== */
+
+/* Aplica apenas nos cards de Missão (1º) e Visão (2º) */
+.company-principles .principle-card:nth-of-type(1),
+.company-principles .principle-card:nth-of-type(2) {
+    padding: 0.9rem 1.6rem !important; /* Mais espaçamento nas laterais (1.6rem) e fino em cima/baixo (0.9rem) */
+    min-height: auto !important;
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+}
+
+/* Reduz margens internas para garantir altura baixa */
+.company-principles .principle-card:nth-of-type(1) h3,
+.company-principles .principle-card:nth-of-type(2) h3 {
+    font-size: 1.05rem !important;
+    margin-top: 0.1rem !important;
+    margin-bottom: 0.2rem !important;
+}
+
+.company-principles .principle-card:nth-of-type(1) p,
+.company-principles .principle-card:nth-of-type(2) p {
+    font-size: 0.82rem !important;
+    line-height: 1.35 !important;
+    margin: 0 !important;
+}
+.company-principles .principle-card.principle-card--values {
+    padding: 0.85rem 1rem !important; /* Espaçamento interno bem menor */
+}
+
+.company-principles .principle-card.principle-card--values h3 {
+    font-size: 1.1rem !important; /* Título menor */
+    margin-top: 0.15rem !important;
+    margin-bottom: 0.4rem !important;
+}
+
+/* Compacta os itens da lista de valores para ocuparem o mínimo de espaço */
+.company-principles .principle-card.principle-card--values .values-list {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.3rem 0.6rem !important; /* Espaço reduzido entre os itens */
+}
+
+.company-principles .principle-card.principle-card--values .values-list span {
+    font-size: 0.78rem !important; /* Texto dos valores bem enxuto */
+    padding: 0.1rem 0 !important;
+    margin: 0 !important;
+}
+
+/* ==========================================================
+   DESCER OS CARDS DE MISSÃO, VISÃO E VALORES
+   ========================================================== */
+
+.company-principles {
+    margin-top: 3rem !important; /* Aumente ou diminua este valor conforme preferir */
+}
+
+/* ==========================================================
+   CORREÇÃO DE CORES DOS CARDS (SUPORTE CORRETO PARA TEMA CLARO)
+   ========================================================== */
+
+/* Cor padrão do card no tema claro (fundo branco/superfície) */
+.company-principles .principle-card {
+    background: var(--surface, #ffffff) !important;
+    color: var(--foreground, #0e1911) !important;
+    border: 1px solid var(--line) !important;
+    border-top: 5px solid #05a405 !important;
+}
+
+/* Cor específica do card no modo escuro (garante o fundo escuro correto) */
+html[data-theme="dark"] .company-principles .principle-card {
+    background: #0d140d !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(5, 164, 5, 0.3) !important;
+    border-top: 5px solid #05a405 !important;
+}
+
+/* Garante que os textos internos acompanhem a cor correta em ambos os temas */
+.company-principles .principle-card h3 {
+    color: var(--foreground) !important;
+}
+
+html[data-theme="dark"] .company-principles .principle-card h3 {
+    color: #ffffff !important;
+}
+
+.company-principles .principle-card p,
+.company-principles .principle-card .principle-label {
+    color: var(--muted) !important;
+}
