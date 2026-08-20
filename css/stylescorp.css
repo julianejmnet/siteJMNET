@@ -165,7 +165,7 @@ p {
 
 .section {
   position: relative;
-  /*padding-block: clamp(5rem, 9vw, 8.5rem);*/
+  padding-block: clamp(5rem, 9vw, 8.5rem);
 }
 
 .section-heading {
@@ -649,7 +649,7 @@ html[data-theme="dark"] .desktop-navigation a:hover {
   grid-template-columns: 1.03fr 0.97fr;
   align-items: center;
   gap: clamp(2rem, 6vw, 6rem);
-  /*padding-block: clamp(4rem, 8vw, 7rem);*/
+  padding-block: clamp(4rem, 8vw, 7rem);
 }
 
 .hero-copy {
@@ -5329,4 +5329,175 @@ a[href*="wa.me"]:hover {
     font-size: .72rem;
     padding: 6px 9px;
   }
+}
+
+/* Transforma todos os cards da página corporativa em Verde */
+.plan-card--lime,
+.plan-card--cyan,
+.plan-card--violet {
+  --plan-accent: #2fa94c !important;
+  border-top-color: #2fa94c !important;
+}
+
+/* Força a cor verde nos textos de velocidade */
+.plan-card--lime .plan-speed strong,
+.plan-card--lime .plan-speed span,
+.plan-card--cyan .plan-speed strong,
+.plan-card--cyan .plan-speed span,
+.plan-card--violet .plan-speed strong,
+.plan-card--violet .plan-speed span {
+  color: #2fa94c !important;
+}
+
+/* Efeito de hover e sombra verde para todos os cards corporativos */
+.plan-card--lime:hover,
+.plan-card--cyan:hover,
+.plan-card--violet:hover {
+  border-color: #2fa94c !important;
+  box-shadow: 0 32px 80px rgba(47, 169, 76, 0.28) !important;
+  transform: translateY(-7px) !important;
+}
+
+/* Padroniza todos os botões de contratação para verde sólido */
+.plan-card .button-primary {
+  background-color: #2fa94c !important;
+  background-image: none !important;
+  border-color: #2fa94c !important;
+  color: #ffffff !important;
+  box-shadow: 0 12px 30px rgba(47, 169, 76, 0.3) !important;
+}
+
+/* Efeito de hover no botão acionado pelo card corporativo */
+.plan-card:hover .button-primary {
+  background-color: #228b37 !important;
+  border-color: #228b37 !important;
+  box-shadow: 0 16px 36px rgba(47, 169, 76, 0.4) !important;
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+
+/* Força máxima para o botão corporativo assumir o verde fixo */
+html body .plans-section .plan-card .button-primary {
+  background-color: #24883b !important;
+  border-color: #24883b !important;
+  background-image: none !important;
+  color: #ffffff !important;
+  box-shadow: 0 12px 30px rgba(47, 169, 76, 0.3) !important;
+}
+
+/* Força máxima para o hover do botão corporativo */
+html body .plans-section .plan-card .button-primary:hover {
+  background-color: #1b682d !important;
+  border-color: #1b682d !important;
+  box-shadow: 0 16px 36px rgba(47, 169, 76, 0.4) !important;
+  transform: translateY(-2px);
+}
+
+/* Efeito verde com brilho (glow) no modo escuro para os botões dos planos corporativos */
+html[data-theme="dark"] .plan-card .button-primary,
+html[data-theme="dark"] .plan-card-actions .button {
+    background: #05a405 !important;
+    color: #ffffff !important;
+    border: 1px solid #22863a !important;
+    box-shadow: 0 0 18px rgba(5, 164, 5, 0.45) !important;
+    transition: all 0.25s ease-in-out !important;
+}
+
+/* Efeito ao passar o mouse (Hover) no modo escuro */
+html[data-theme="dark"] .plan-card .button-primary:hover,
+html[data-theme="dark"] .plan-card-actions .button:hover {
+    background: #22863a !important;
+    box-shadow: 0 0 25px rgba(5, 164, 5, 0.75) !important;
+    transform: translateY(-2px) !important;
+}
+
+.plan-price {
+    position: relative;
+    margin: 1.25rem 0;
+    padding: 1.15rem;
+    overflow: hidden;
+    border: 1px solid color-mix(in srgb, var(--green) 30%, var(--line));
+    border-radius: 18px;
+    
+    /* Degradê verde para o modo claro */
+    background: linear-gradient(135deg, color-mix(in srgb, var(--green) 18%, var(--surface)), var(--surface-soft)) !important;
+}
+
+/* Degradê verde customizado e mais imersivo para o modo escuro */
+html[data-theme="dark"] .plan-price {
+    background: linear-gradient(135deg, rgba(5, 164, 5, 0.22), rgba(16, 32, 22, 0.9)) !important;
+    border-color: rgba(5, 164, 5, 0.4) !important;
+}
+
+/* ==========================================================
+   EFEITO VERDE NOS BOTÕES E BRILHO AO REDOR DOS PLANOS
+   (Mantém as cores de borda originais dos cards)
+   ========================================================== */
+
+/* 1. Botões "Contrate Já" (Força o verde e o brilho em ambos os temas) */
+.plan-card .button-primary,
+.plan-card-actions .button,
+.plan-card--lime .button-primary,
+.plan-card--cyan .button-primary,
+.plan-card--violet .button-primary {
+    background: #05a405 !important;
+    background-image: none !important;
+    border: 1px solid #05a405 !important;
+    color: #ffffff !important;
+    box-shadow: 0 10px 25px rgba(5, 164, 5, 0.3) !important;
+    transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease !important;
+}
+
+/* Efeito Hover do Botão */
+.plan-card .button-primary:hover,
+.plan-card-actions .button:hover {
+    background: #048b04 !important;
+    box-shadow: 0 0 22px rgba(5, 164, 5, 0.6) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* 2. Brilho (Glow) ao redor do card ao passar o mouse, mantendo a cor da borda original */
+.plan-card:hover {
+    box-shadow: 0 32px 80px rgba(5, 164, 5, 0.35) !important;
+    transform: translateY(-7px) !important;
+}
+
+/* Modo escuro: garante o fundo e a suavidade da sombra sem alterar a cor da borda */
+html[data-theme="dark"] .plan-card {
+    background: #102016 !important;
+}
+
+html[data-theme="dark"] .plan-card:hover {
+    box-shadow: 0 32px 80px rgba(5, 164, 5, 0.45) !important;
+}
+
+/* ==========================================================
+   EFEITO VERDE EXCLUSIVO NOS BOTÕES "CONTRATE JÁ"
+   ========================================================== */
+
+/* Estado normal do botão */
+.plan-card .button-primary,
+.plan-card-actions .button,
+.plan-card--lime .button-primary,
+.plan-card--cyan .button-primary,
+.plan-card--violet .button-primary {
+    background: #05a405 !important;
+    background-image: none !important;
+    border: 1px solid #05a405 !important;
+    color: #ffffff !important;
+    box-shadow: 0 10px 25px rgba(5, 164, 5, 0.35) !important;
+    transition: all 0.25s ease-in-out !important;
+}
+
+/* Estado ao passar o mouse (Hover com brilho intenso) */
+.plan-card .button-primary:hover,
+.plan-card-actions .button:hover,
+.plan-card--lime .button-primary:hover,
+.plan-card--cyan .button-primary:hover,
+.plan-card--violet .button-primary:hover {
+    background: #048b04 !important;
+    border-color: #048b04 !important;
+    box-shadow: 0 0 25px rgba(5, 164, 5, 0.75) !important;
+    transform: translateY(-2px) !important;
 }
