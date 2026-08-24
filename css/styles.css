@@ -194,7 +194,7 @@ p {
   position: relative;
   /*padding-block: clamp(5rem, 9vw, 8.5rem);*/
 }
-
+ 
 .section-heading {
   max-width: 760px;
   margin-bottom: clamp(2.3rem, 5vw, 4rem);
