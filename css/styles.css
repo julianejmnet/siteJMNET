@@ -709,9 +709,7 @@ html[data-theme="dark"] .desktop-navigation a:hover {
   font-size: clamp(4rem, 6.5rem, 6rem);
   font-weight: 900;
   letter-spacing: -0.080em;
-  line-height: 0.82;
-  margin: 0;
-  padding: 0;
+  line-height: 0.90;
 }
 
 .hero h1 span {
