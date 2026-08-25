@@ -5502,3 +5502,477 @@ html[data-theme="dark"] .plan-card:hover {
     transform: translateY(-2px) !important;
 }
 
+/* Move a composição inteira para cima sem criar espaço vazio */
+.about-visual {
+    position: relative;
+    top: -40px;
+    z-index: 2;
+}
+
+.about-company-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+    transform: none;
+}
+
+.about-visual {
+    position: relative;
+    top: -40px;
+    z-index: 2;
+}
+
+.about-logo-panel {
+    overflow: visible;
+    height: auto;
+}
+
+.about-company-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 30px;
+    transform: none;
+}
+
+.about-visual {
+    position: relative;
+    top: -30px;
+    z-index: 2;
+}
+
+/* Força a seção de conteúdo a ocupar a largura e centralizar os elementos filhos */
+.about-content {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: left !important;
+  width: 100% !important;
+}
+
+/* Centraliza o bloco de princípios e alinha os cards perfeitamente */
+.company-principles {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  max-width: 800px !important;
+  margin: 0 auto !important;
+}
+
+/* Define a largura ideal para cada card para que fiquem uniformes e centralizados */
+.principle-card {
+  width: 100% !important;
+  max-width: 700px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Cria a linha que deixa Missão e Visão lado a lado */
+.principles-row {
+  display: flex;
+  gap: 1.5rem; /* Espaço entre os cards de missão e visão */
+  width: 100%;
+  max-width: 800px;
+  justify-content: center;
+}
+
+/* Ajusta os cards de missão e visão para dividirem o espaço igualmente */
+.principles-row .principle-card {
+  flex: 1;
+  margin: 0 !important;
+}
+
+/* Mantém o card de valores logo abaixo, centralizado e com a largura menor que ajustamos */
+.principle-card.principle-card--values {
+  width: 100% !important;
+  max-width: 800px !important; /* Ou ajuste para 450px se quiser mais estreito */
+  margin-top: 1.5rem !important;
+}
+
+/* Responsivo para celulares: se a tela for menor, empilha missão e visão um em cima do outro */
+@media (max-width: 768px) {
+  .principles-row {
+    flex-direction: column;
+  }
+}
+
+/* Força a redução de altura e compactação do card de Valores */
+.principle-card.principle-card--values {
+  padding: 0.8rem 1rem !important; /* Deixa bem justo por dentro */
+}
+
+/* Reduz o espaço entre os itens da lista */
+.principle-card.principle-card--values .values-list {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.25rem !important; /* Espaçamento mínimo entre os tópicos */
+}
+
+/* Reduz a altura das linhas e o tamanho da fonte para economizar espaço vertical */
+.principle-card.principle-card--values .values-list span {
+  font-size: 0.82rem !important;
+  line-height: 1.25 !important; /* Linhas bem próximas */
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Remove margens extras do parágrafo ou título se houverem */
+.principle-card.principle-card--values p,
+.principle-card.principle-card--values div {
+  margin-bottom: 0 !important;
+}
+
+/* Aumenta a distância entre o card de Valores e o rodapé */
+.company-principles {
+  margin-bottom: 1rem !important; /* Aumente para 5rem ou 6rem se quiser ainda mais espaço */
+}
+
+/* Remove qualquer borda ou linha separadora entre os itens de valores */
+.principle-card.principle-card--values .values-list span {
+  border: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+/* --- CARD DE VALORES MAIS LARGO E MAIS BAIXO --- */
+
+.principle-card.principle-card--values {
+  background: var(--card-bg, #ffffff);
+  border-radius: 16px;
+  padding: 1rem 1.25rem !important; 
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  
+  /* Aumenta a largura lateral e usa grid interno para aproveitar o espaço horizontal */
+  max-width: 900px !important; /* Aumente para 950px ou 1000px se quiser ainda mais largo */
+  width: 100% !important;
+  margin: 1.5rem auto 4rem auto !important;
+}
+
+/* Título principal "Valores" */
+.principle-card.principle-card--values .principle-label {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  display: block;
+  color: var(--heading-color, #111);
+}
+
+/* Transforma os valores em 2 colunas quando o card for mais largo */
+.principle-card.principle-card--values .values-list {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important; /* Divide em 2 colunas lado a lado */
+  gap: 0.5rem !important; 
+}
+
+/* Cada item individual da lista */
+.principle-card.principle-card--values .values-list span {
+  display: block !important;
+  border: none !important;
+  background: rgba(86, 197, 106, 0.03); 
+  padding: 0.5rem 0.75rem !important; 
+  border-radius: 6px;
+  font-size: 0.82rem !important; 
+  line-height: 1.35 !important;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+/* Efeito ao passar o mouse */
+.principle-card.principle-card--values .values-list span:hover {
+  background: rgba(86, 197, 106, 0.07);
+  transform: translateY(-2px);
+}
+
+/* Destaque (Título) de cada valor */
+.principle-card.principle-card--values .values-list strong {
+  display: inline-block;
+  color: #2b7a3e; 
+  font-weight: 600;
+  margin-right: 0.25rem;
+}
+
+/* Responsivo para celulares (volta a 1 coluna se a tela for menor) */
+@media (max-width: 768px) {
+  .principle-card.principle-card--values .values-list {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* --- CARD DE VALORES ADAPTATIVO (CLARO E ESCURO) --- */
+
+.principle-card.principle-card--values {
+  /* Cores dinâmicas baseadas no tema (padrão claro / escuro) */
+  background: var(--card-bg, #ffffff) !important;
+  border-radius: 16px;
+  padding: 1rem 1.25rem !important; 
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border-color, rgba(0, 0, 0, 0.08)) !important;
+  
+  max-width: 900px !important;
+  width: 100% !important;
+  margin: 1.5rem auto 4rem auto !important;
+}
+
+/* Ajuste automático para o fundo e borda no Modo Escuro do seu site */
+[data-theme="dark"] .principle-card.principle-card--values {
+  background: #121f14 !important; /* Um tom escuro elegante, combinando com o tema verde/escuro da JMNET */
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Título principal "Valores" */
+.principle-card.principle-card--values .principle-label {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  display: block;
+  color: var(--heading-color, #111);
+}
+
+[data-theme="dark"] .principle-card.principle-card--values .principle-label {
+  color: #ffffff !important;
+}
+
+/* Container da lista em 2 colunas */
+.principle-card.principle-card--values .values-list {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 0.5rem !important; 
+}
+
+/* Cada item individual da lista */
+.principle-card.principle-card--values .values-list span {
+  display: block !important;
+  border: none !important;
+  background: rgba(86, 197, 106, 0.04) !important; 
+  padding: 0.5rem 0.75rem !important; 
+  border-radius: 6px;
+  font-size: 0.82rem !important; 
+  line-height: 1.35 !important;
+  color: var(--text-color, #444);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+/* Fundo e texto dos itens no Modo Escuro */
+[data-theme="dark"] .principle-card.principle-card--values .values-list span {
+  background: rgba(86, 197, 106, 0.08) !important;
+  color: #d1d5db !important; /* Texto cinza claro para ótima legibilidade */
+}
+
+/* Efeito ao passar o mouse */
+.principle-card.principle-card--values .values-list span:hover {
+  transform: translateY(-2px);
+}
+
+[data-theme="dark"] .principle-card.principle-card--values .values-list span:hover {
+  background: rgba(86, 197, 106, 0.15) !important;
+}
+
+/* Destaque (Título) de cada valor */
+.principle-card.principle-card--values .values-list strong {
+  display: inline-block;
+  color: #2b7a3e; 
+  font-weight: 600;
+  margin-right: 0.25rem;
+}
+
+[data-theme="dark"] .principle-card.principle-card--values .values-list strong {
+  color: #56c56a !important; /* Verde mais vibrante e legível no escuro */
+}
+
+/* Responsivo para celulares */
+@media (max-width: 768px) {
+  .principle-card.principle-card--values .values-list {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* --- ESTILIZAÇÃO GERAL E EFEITOS PARA OS CARDS (MISSÃO, VISÃO E VALORES) --- */
+
+.principle-card {
+  background: var(--card-bg, #ffffff) !important;
+  border-radius: 16px !important;
+  padding: 1.5rem !important;
+  border: 1px solid var(--border-color, rgba(0, 0, 0, 0.06)) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04) !important;
+  
+  /* Efeito de transição suave para todas as animações */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+/* EFEITO AO PASSAR O MOUSE (HOVER) NOS CARDS */
+.principle-card:hover {
+  transform: translateY(-6px) !important; /* O card flutua levemente para cima */
+  box-shadow: 0 18px 40px rgba(86, 197, 106, 0.12) !important; /* Sombra sutil esverdeada */
+  border-color: rgba(86, 197, 106, 0.3) !important; /* Borda ganha um tom verde elegante */
+}
+
+/* Efeito de brilho/luz sutil passando no topo do card ao interagir */
+.principle-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #2b7a3e, #56c56a);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.principle-card:hover::before {
+  opacity: 1; /* Revela uma barra colorida no topo do card ao passar o mouse */
+}
+
+/* ADAPTAÇÃO PARA O MODO ESCURO DOS CARDS DE MISSÃO E VISÃO */
+[data-theme="dark"] .principle-card:not(.principle-card--values) {
+  background: #121f14 !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+[data-theme="dark"] .principle-card:not(.principle-card--values):hover {
+  border-color: rgba(86, 197, 106, 0.4) !important;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* ESTILIZAÇÃO DOS ÍCONES COM EFEITO DE ZOOM */
+.principle-icon {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.principle-card:hover .principle-icon {
+  transform: scale(1.1) rotate(3deg); /* O ícone dá um leve zoom e inclinação divertida */
+}
+
+/* --- EFEITO DE LUZ VERDE AO REDOR DOS CARDS --- */
+
+.principle-card {
+  background: var(--card-bg, #ffffff) !important;
+  border-radius: 16px !important;
+  padding: 1.5rem !important;
+  border: 1px solid var(--border-color, rgba(0, 0, 0, 0.06)) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04) !important;
+  
+  /* Transição suave para o efeito de luz e movimento */
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+/* EFEITO AO PASSAR O MOUSE: FLUTUA + LUZ VERDE AO REDOR */
+.principle-card:hover {
+  transform: translateY(-6px) !important; 
+  border-color: rgba(86, 197, 106, 0.6) !important; /* Borda fica verde marcante */
+  
+  /* Cria o efeito de luz neon/glow verde ao redor do card */
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.08), 
+    0 0 25px rgba(86, 197, 106, 0.35), 
+    0 0 50px rgba(86, 197, 106, 0.15) !important; 
+}
+
+/* Barra de gradiente no topo do card ao passar o mouse */
+.principle-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #2b7a3e, #56c56a);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.principle-card:hover::before {
+  opacity: 1;
+}
+
+/* ADAPTAÇÃO PARA O MODO ESCURO (Glow verde mais destacado no fundo escuro) */
+[data-theme="dark"] .principle-card:not(.principle-card--values) {
+  background: #121f14 !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+[data-theme="dark"] .principle-card:hover {
+  border-color: rgba(86, 197, 106, 0.8) !important;
+  
+  /* Glow verde mais intenso para o modo escuro */
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.6), 
+    0 0 30px rgba(86, 197, 106, 0.45), 
+    0 0 60px rgba(86, 197, 106, 0.2) !important;
+}
+
+/* Animação dos ícones */
+.principle-icon {
+  transition: transform 0.3s ease;
+}
+
+.principle-card:hover .principle-icon {
+  transform: scale(1.1) rotate(3deg);
+}
+
+/* --- BORDAS VERDES PARA OS CARDS (MISSÃO, VISÃO E VALORES) --- */
+
+.principle-card {
+  background: var(--card-bg, #ffffff) !important;
+  border-radius: 16px !important;
+  padding: 1.5rem !important;
+  
+  /* Borda verde visível no estado normal (mude o '0.25' se quiser mais forte ou mais fraca) */
+  border: 1.5px solid rgba(86, 197, 106, 0.3) !important;
+  
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04) !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Estado quando o mouse passa por cima (Hover) */
+.principle-card:hover {
+  transform: translateY(-6px) !important; 
+  
+  /* Borda verde bem viva e forte ao passar o mouse */
+  border-color: rgba(86, 197, 106, 0.9) !important; 
+  
+  /* Mantém o efeito de luz verde ao redor */
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.08), 
+    0 0 25px rgba(86, 197, 106, 0.35), 
+    0 0 50px rgba(86, 197, 106, 0.15) !important; 
+}
+
+/* Adaptação para o Modo Escuro (borda mais sutil no normal e forte no hover) */
+[data-theme="dark"] .principle-card {
+  background: #121f14 !important;
+  border: 1.5px solid rgba(86, 197, 106, 0.25) !important;
+}
+
+[data-theme="dark"] .principle-card:hover {
+  border-color: #56c56a !important; /* Verde sólido brilhante no escuro */
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.6), 
+    0 0 30px rgba(86, 197, 106, 0.45), 
+    0 0 60px rgba(86, 197, 106, 0.2) !important;
+}
+
+
+/* Força um grande espaço acima do texto de introdução */
+.company-intro, 
+.about-text, 
+.company-description {
+  margin-top: 5rem !important; /* Aumente para 6rem ou 7rem se ainda achar pouco */
+}
+
+/* Se preferir aplicar diretamente na seção onde o texto está localizado */
+#jmnet {
+  padding-top: 2rem !important;
+}
+
