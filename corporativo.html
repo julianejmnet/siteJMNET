@@ -428,6 +428,8 @@
 
 </div>
 
+</div>
+
   <!-- VLibras: tradução automática de Português Brasileiro para Libras -->
   <div vw class="enabled" aria-label="Acessibilidade em Libras">
     <div vw-access-button class="active"></div>
@@ -443,22 +445,58 @@
 </html>
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const button = document.getElementById("jmnetWaButton");
-  const chatbox = document.querySelector(".jmnet-wa-chatbox");
+document.addEventListener("DOMContentLoaded", () => {
+  const waButton = document.getElementById("jmnetWaButton");
+  const waChatbox = document.getElementById("jmnetWaChatbox");
+  const waForm = document.getElementById("jmnetWaForm");
+  const clientInput = document.getElementById("jmnetClientInput");
+  const waBody = document.getElementById("jmnetWaBody");
 
-  if (!button || !chatbox) return;
+  let hasGreeted = false;
 
-  button.addEventListener("click", function (event) {
-    event.preventDefault();
-    event.stopPropagation();
+  // Garante que começa fechado
+  if (waChatbox && !waChatbox.style.display) {
+    waChatbox.style.display = "none";
+  }
 
-    chatbox.classList.toggle("active");
+  // Abrir/Fechar o chat e mandar a mensagem interativa do Agente
+  waButton.addEventListener("click", () => {
+    const isVisible = waChatbox.style.display === "block";
+    waChatbox.style.display = isVisible ? "none" : "block";
+    waButton.setAttribute("aria-expanded", !isVisible);
 
-    button.setAttribute(
-      "aria-expanded",
-      chatbox.classList.contains("active") ? "true" : "false"
-    );
+    if (!isVisible && !hasGreeted) {
+      hasGreeted = true;
+      
+      // Simula o Agente Pedro interagindo após 800ms
+      setTimeout(() => {
+        const interactiveMsg = document.createElement("div");
+        interactiveMsg.className = "jmnet-wa-message";
+        interactiveMsg.innerHTML = `
+          Olá!👋 Qual plano ou dúvida você gostaria de consultar hoje?
+          <div class="jmnet-wa-time">Agora mesmo</div>
+        `;
+        waBody.appendChild(interactiveMsg);
+        waBody.scrollTop = waBody.scrollHeight;
+      }, 800);
+    }
+  });
+
+  // Envia o texto digitado direto para o WhatsApp da JMNET
+  waForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const duda = clientInput.value.trim();
+    if (!duda) return;
+
+    const phoneNumber = "557330269305";
+    const text = `Olá! Vim pelo site da JMNET. Minha dúvida/solicitação é:\n\n${duda}`;
+    const encodedText = encodeURIComponent(text);
+
+    const whatsappUrl = `https://api.whatsapp.com/send/?phone=${phoneNumber}&text=${encodedText}&type=phone_number&app_absent=0`;
+    window.open(whatsappUrl, "_blank");
+
+    clientInput.value = "";
   });
 });
 </script>
