@@ -5502,21 +5502,29 @@ html[data-theme="dark"] .plan-card:hover {
     transform: translateY(-2px) !important;
 }
 
-/* Caixa de texto */
+/* --- CAIXAS DE TEXTO (MODO CLARO E ESCURO) --- */
 input[type="text"],
 textarea {
     width: 100%;
     box-sizing: border-box;
     padding: 12px 15px;
-    border: 1.5px solid #d6d6d6;
+    border: 1.5px solid var(--border-color, #d6d6d6);
     border-radius: 10px;
-    background: #fff;
-    color: #333;
+    background: var(--card-bg, #fff);
+    color: var(--text-color, #333);
     font-size: 14px;
     font-family: Arial, sans-serif;
     outline: none;
     transition: all 0.25s ease;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+/* Modo escuro específico para o fundo e borda do input */
+[data-theme="dark"] input[type="text"],
+[data-theme="dark"] textarea {
+    background: #182c1b !important;
+    border-color: rgba(255, 255, 255, 0.15) !important;
+    color: #ffffff !important;
 }
 
 /* Placeholder */
@@ -5525,35 +5533,218 @@ textarea::placeholder {
     color: #999;
 }
 
-/* Quando clicar na caixa */
-input[type="text"]:focus,
-textarea:focus {
-    border-color: #00a900;
-    box-shadow: 0 0 0 3px rgba(0, 169, 0, 0.12);
-    background: #fff;
+[data-theme="dark"] input[type="text"]::placeholder,
+[data-theme="dark"] textarea::placeholder {
+    color: #a0a0a0 !important;
 }
 
-/* Botão */
+/* Quando clicar na caixa (Focus) */
+input[type="text"]:focus,
+textarea:focus {
+    border-color: #56c56a !important;
+    box-shadow: 0 0 0 3px rgba(86, 197, 106, 0.2) !important;
+    background: var(--card-bg, #fff);
+}
+
+[data-theme="dark"] input[type="text"]:focus,
+[data-theme="dark"] textarea:focus {
+    background: #121f14 !important;
+}
+
+/* --- BOTÃO (MANTÉM O PADRÃO VERDE ELEGANTE EM AMBOS OS MODOS) --- */
 button {
     width: 100%;
     padding: 12px;
     margin-top: 8px;
     border: none;
     border-radius: 10px;
-    background: linear-gradient(135deg, #00b900, #009900);
+    background: linear-gradient(135deg, #56c56a, #2b9348);
     color: white;
     font-size: 14px;
     font-weight: bold;
     cursor: pointer;
     transition: 0.2s ease;
-    box-shadow: 0 3px 7px rgba(0, 150, 0, 0.25);
+    box-shadow: 0 3px 10px rgba(43, 147, 72, 0.3);
 }
 
 button:hover {
-    background: linear-gradient(135deg, #00c900, #00a500);
-    transform: translateY(-1px);
+    background: linear-gradient(135deg, #6fdc82, #38b000);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(56, 176, 0, 0.4);
 }
 
 button:active {
     transform: translateY(0);
+}
+
+/* --- CAIXAS DE TEXTO (MODO CLARO E ESCURO) --- */
+input[type="text"],
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 15px;
+    border: 1.5px solid var(--border-color, #d6d6d6);
+    border-radius: 10px;
+    background: var(--card-bg, #fff);
+    color: var(--text-color, #333);
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    outline: none;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+/* Modo escuro específico para o fundo e borda do input */
+[data-theme="dark"] input[type="text"],
+[data-theme="dark"] textarea {
+    background: #182c1b !important;
+    border-color: rgba(255, 255, 255, 0.15) !important;
+    color: #ffffff !important;
+}
+
+/* Placeholder */
+input[type="text"]::placeholder,
+textarea::placeholder {
+    color: #999;
+}
+
+[data-theme="dark"] input[type="text"]::placeholder,
+[data-theme="dark"] textarea::placeholder {
+    color: #a0a0a0 !important;
+}
+
+/* Quando clicar na caixa (Focus) */
+input[type="text"]:focus,
+textarea:focus {
+    border-color: #56c56a !important;
+    box-shadow: 0 0 0 3px rgba(86, 197, 106, 0.2) !important;
+    background: var(--card-bg, #fff);
+}
+
+[data-theme="dark"] input[type="text"]:focus,
+[data-theme="dark"] textarea:focus {
+    background: #121f14 !important;
+}
+
+/* --- BOTÃO (MANTÉM O PADRÃO VERDE ELEGANTE EM AMBOS OS MODOS) --- */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #56c56a, #2b9348);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease;
+    box-shadow: 0 3px 10px rgba(43, 147, 72, 0.3);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #6fdc82, #38b000);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(56, 176, 0, 0.4);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* --- ORGANIZAÇÃO DOS CARDS: MISSÃO E VISÃO LADO A LADO, VALORES EMBAIXO --- */
+
+/* Ajusta o container principal que guarda os três cards */
+.company-principles {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important; /* Cria duas colunas */
+  gap: 20px !important;
+  align-items: stretch !important;
+}
+
+/* Remove os <br> antigos para não quebrarem o layout do grid */
+.company-principles br {
+  display: none !important;
+}
+
+/* O primeiro card (Missão) fica na coluna 1 */
+.company-principles .principle-card:nth-child(1) {
+  grid-column: 1 / 2 !important;
+}
+
+/* O segundo card (Visão) fica na coluna 2 (ficando lado a lado com a Missão) */
+.company-principles .principle-card:nth-child(3) { /* Considerando o índice gerado pelo HTML */
+  grid-column: 2 / 3 !important;
+}
+
+/* O terceiro card (Valores) ocupa as duas colunas inteiras embaixo */
+.company-principles .principle-card.principle-card--values {
+  grid-column: 1 / -1 !important; /* Ocupa de ponta a ponta na horizontal */
+}
+
+/* --- EFEITO DE HOVER MAIS LEVE E SUTIL --- */
+
+/* Estado normal dos cards */
+.principle-card,
+.principle-card.principle-card--values,
+.plan-card,
+.business-card {
+  border: 1.5px solid rgba(86, 197, 106, 0.12) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03) !important;
+  transition: all 0.3s ease-in-out !important;
+}
+
+[data-theme="dark"] .principle-card,
+[data-theme="dark"] .principle-card.principle-card--values,
+[data-theme="dark"] .plan-card,
+[data-theme="dark"] .business-card {
+  border: 1.5px solid rgba(86, 197, 106, 0.15) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Hover super leve e elegante (tanto claro quanto escuro) */
+.principle-card:hover,
+.principle-card.principle-card--values:hover,
+.plan-card:hover,
+.business-card:hover {
+  transform: translateY(-3px) !important; /* Sobe bem pouquinho, de forma discreta */
+  border-color: rgba(86, 197, 106, 0.3) !important; /* Borda verde bem suave */
+  box-shadow: 
+    0 10px 25px rgba(0, 0, 0, 0.05), 
+    0 0 12px rgba(86, 197, 106, 0.1) !important; /* Brilho reduzido pela metade */
+}
+
+[data-theme="dark"] .principle-card:hover,
+[data-theme="dark"] .principle-card.principle-card--values:hover,
+[data-theme="dark"] .plan-card:hover,
+[data-theme="dark"] .business-card:hover {
+  border-color: rgba(86, 197, 106, 0.35) !important;
+  box-shadow: 
+    0 10px 25px rgba(0, 0, 0, 0.3), 
+    0 0 15px rgba(86, 197, 106, 0.12) !important;
+}
+
+/* --- APENAS OS SÍMBOLOS/ÍCONES COM O TOM VERDE DA JMNET --- */
+
+/* Aplica o verde estritamente nos ícones e símbolos dos cards */
+.principle-icon,
+.principle-icon i,
+.plan-topline i,
+.plan-card ul li i,
+.plan-card ul li [data-lucide] {
+  color: #56c56a !important;
+  stroke: #56c56a !important; /* Essencial para ícones em linha (SVG/Lucide) */
+}
+
+/* --- AJUSTE DE ESPAÇAMENTO DO TÍTULO PRINCIPAL DO HERO --- */
+
+.hero-copy h1 {
+  line-height: 1.0 !important;    /* Dá um respiro confortável entre as linhas */
+  margin-bottom: 1.0rem !important; /* Afasta o título dos elementos abaixo dele */
+}
+
+/* Garante que o span da segunda linha tenha uma distância limpa */
+.hero-copy h1 span {
+  display: block !important;        /* Força a segunda linha a descer perfeitamente */
+  margin-top: 0.25rem !important;   /* Espaço sutil entre "PLANO" e "É TE CONECTAR" */
 }
