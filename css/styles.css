@@ -5762,3 +5762,91 @@ body html body .plan-card--violet a.button.button-primary:hover {
   border-color: #8b5cf6 !important;
   color: #ffffff !important;
 }
+
+/* --- CAIXAS DE TEXTO (MODO CLARO E ESCURO) --- */
+input[type="text"],
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 15px;
+    border: 1.5px solid var(--border-color, #d6d6d6);
+    border-radius: 10px;
+    background: var(--card-bg, #fff);
+    color: var(--text-color, #333);
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    outline: none;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+/* Modo escuro específico para o fundo e borda do input */
+[data-theme="dark"] input[type="text"],
+[data-theme="dark"] textarea {
+    background: #182c1b !important;
+    border-color: rgba(255, 255, 255, 0.15) !important;
+    color: #ffffff !important;
+}
+
+/* Placeholder */
+input[type="text"]::placeholder,
+textarea::placeholder {
+    color: #999;
+}
+
+[data-theme="dark"] input[type="text"]::placeholder,
+[data-theme="dark"] textarea::placeholder {
+    color: #a0a0a0 !important;
+}
+
+/* Quando clicar na caixa (Focus) */
+input[type="text"]:focus,
+textarea:focus {
+    border-color: #56c56a !important;
+    box-shadow: 0 0 0 3px rgba(86, 197, 106, 0.2) !important;
+    background: var(--card-bg, #fff);
+}
+
+[data-theme="dark"] input[type="text"]:focus,
+[data-theme="dark"] textarea:focus {
+    background: #121f14 !important;
+}
+
+/* --- BOTÃO (MANTÉM O PADRÃO VERDE ELEGANTE EM AMBOS OS MODOS) --- */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #56c56a, #2b9348);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease;
+    box-shadow: 0 3px 10px rgba(43, 147, 72, 0.3);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #6fdc82, #38b000);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(56, 176, 0, 0.4);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* --- AJUSTE DE ESPAÇAMENTO E SEPARAÇÃO DO TÍTULO PRINCIPAL --- */
+
+.hero-copy h1 {
+  line-height: 1.0 !important;    /* Dá um respiro confortável entre as linhas */
+  margin-bottom: 1.0rem !important; /* Afasta o título dos elementos abaixo dele */
+}
+
+/* Garante que o span da segunda linha tenha uma distância limpa */
+.hero-copy h1 span {
+  display: block !important;        /* Força a segunda linha a descer perfeitamente */
+  margin-top: 0.25rem !important;   /* Espaço sutil entre "PLANO" e "É TE CONECTAR" */
+}
