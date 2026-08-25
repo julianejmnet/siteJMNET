@@ -2163,7 +2163,7 @@ html[data-theme="dark"] .plan-speed strong {
   gap: clamp(1.4rem, 4vw, 3rem);
   padding: clamp(1rem, 2.5vw, 1.5rem);
   overflow: hidden;
-  border: 1px solid var(--line);
+  /*border: 1px solid var(--line);*/
   border-radius: var(--radius-lg);
   background:
     linear-gradient(125deg, var(--surface) 0%, var(--surface) 62%, color-mix(in srgb, var(--green) 10%, var(--surface-soft)) 100%);
