@@ -678,7 +678,7 @@ html[data-theme="dark"] .desktop-navigation a:hover {
 }
 
 .hero h1 {
-  max-width: 900px;
+  max-width: 1000px;
   font-size: clamp(4rem, 6.5rem, 6rem);
   font-weight: 900;
   letter-spacing: -0.080em;
