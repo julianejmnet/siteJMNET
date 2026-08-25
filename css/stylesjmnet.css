@@ -6159,3 +6159,27 @@ button:active {
 [data-theme="dark"] .principle-card.principle-card--values {
   border: 1.5px solid rgba(255, 255, 255, 0.08) !important;
 }
+
+/* --- CARD DE VALORES COM VERDE BEM SUTIL --- */
+
+/* Borda discreta no estado normal */
+.principle-card.principle-card--values {
+  border: 1.5px solid rgba(86, 197, 106, 0.12) !important;
+}
+
+[data-theme="dark"] .principle-card.principle-card--values {
+  border: 1.5px solid rgba(86, 197, 106, 0.15) !important;
+}
+
+/* Efeito ao passar o mouse (Hover suave e elegante) */
+.principle-card.principle-card--values:hover {
+  border-color: rgba(86, 197, 106, 0.3) !important;
+  box-shadow: 0 14px 35px rgba(86, 197, 106, 0.08) !important;
+  transform: translateY(-6px) !important;
+}
+
+[data-theme="dark"] .principle-card.principle-card--values:hover {
+  border-color: rgba(86, 197, 106, 0.35) !important;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5) !important;
+  transform: translateY(-6px) !important;
+}
