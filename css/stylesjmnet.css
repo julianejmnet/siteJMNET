@@ -5657,7 +5657,7 @@ html[data-theme="dark"] .plan-card:hover {
 /* Título principal "Valores" */
 .principle-card.principle-card--values .principle-label {
   font-size: 0.75rem;
-  font-weight: 700;
+  font-weight: 799;
   margin-bottom: 0.75rem;
   display: block;
   color: var(--heading-color, #22863a);
@@ -5726,11 +5726,11 @@ html[data-theme="dark"] .plan-card:hover {
 
 /* Título principal "Valores" */
 .principle-card.principle-card--values .principle-label {
-  font-size: 1.15rem;
-  font-weight: 700;
+  font-size: 0.70rem;
+  font-weight: 799;
   margin-bottom: 0.75rem;
   display: block;
-  color: var(--heading-color, #111);
+  color: var(--heading-color, #22863a);
 }
 
 [data-theme="dark"] .principle-card.principle-card--values .principle-label {
