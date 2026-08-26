@@ -5660,7 +5660,7 @@ html[data-theme="dark"] .plan-card:hover {
   font-weight: 700;
   margin-bottom: 0.75rem;
   display: block;
-  color: var(--heading-color, #111);
+  color: var(--heading-color, #22863a);
 }
 
 /* Transforma os valores em 2 colunas quando o card for mais largo */
