@@ -5656,7 +5656,7 @@ html[data-theme="dark"] .plan-card:hover {
 
 /* Título principal "Valores" */
 .principle-card.principle-card--values .principle-label {
-  font-size: 1.15rem;
+  font-size: 0.75rem;
   font-weight: 700;
   margin-bottom: 0.75rem;
   display: block;
