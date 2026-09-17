@@ -12,8 +12,8 @@
   --green-soft: #cfcfcf;
   --deep: #07130a;
   --deep-soft: #0f2a17;
-  --cyan: #00d4ff;
-  --violet: #8b5cf6;
+  --cyan: #56c56a;
+  --violet: #56c56a;
   --danger: #d92d20;
   --warning: #ffb648;
   --shadow-sm: 0 12px 30px rgba(17, 68, 31, 0.08);
@@ -3334,7 +3334,7 @@ html:not([data-theme]) .brand-logo-dark {
 }
 
 .tv-marquee::-webkit-scrollbar-thumb{
-    background:#00d4ff;
+    background:#56c56a;
     border-radius:10px;
 }
 
@@ -4659,7 +4659,7 @@ b {
   height:45px;
   border-radius:50%;
   border:0;
-  background:#00d4ff;
+  background:#56c56a;
   color:#000;
   font-size:25px;
   cursor:pointer;

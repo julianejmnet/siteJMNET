@@ -12,8 +12,8 @@
   --green-soft: #cfcfcf;
   --deep: #07130a;
   --deep-soft: #0f2a17;
-  --cyan: #00d4ff;
-  --violet: #8b5cf6;
+  --cyan: #56c56a;
+  --violet: #56c56a;
   --danger: #d92d20;
   --warning: #ffb648;
   --shadow-sm: 0 12px 30px rgba(17, 68, 31, 0.08);
@@ -1194,11 +1194,11 @@ html[data-theme="dark"] .desktop-navigation a:hover {
 }
 
 .plan-card--cyan {
-  --plan-accent: #00d4ff;
+  --plan-accent: #56c56a;
 }
 
 .plan-card--violet {
-  --plan-accent: #8b5cf6;
+  --plan-accent: #56c56a;
 }
 
 /* Aplicação das cores nos textos de velocidade */
@@ -1258,11 +1258,11 @@ html[data-theme="dark"] .desktop-navigation a:hover {
 }
 
 .plan-card--cyan {
-  border-top-color: #00d4ff !important;
+  border-top-color: #56c56a !important;
 }
 
 .plan-card--violet {
-  border-top-color: #8b5cf6 !important;
+  border-top-color: #56c56a !important;
 }
 
 .plan-card--cyan:hover,
@@ -1280,13 +1280,13 @@ html[data-theme="dark"] .desktop-navigation a:hover {
 }
 
 .plan-card--cyan .button.button-primary {
-  background: #00d4ff !important;
+  background: #56c56a !important;
   background-image: none !important;
   box-shadow: 0 12px 30px rgba(0, 212, 255, 0.3) !important;
 }
 
 .plan-card--violet .button.button-primary {
-  background: #8b5cf6 !important;
+  background: #56c56a !important;
   background-image: none !important;
   box-shadow: 0 12px 30px rgba(139, 92, 246, 0.3) !important;
 }
@@ -1300,16 +1300,16 @@ body html body .plan-card--lime a.button.button-primary {
 }
 
 body html body .plan-card--cyan a.button.button-primary {
-  background: #00d4ff !important;
+  background: #56c56a !important;
   background-image: none !important;
-  border-color: #00d4ff !important;
+  border-color: #56c56a !important;
   color: #ffffff !important;
 }
 
 body html body .plan-card--violet a.button.button-primary {
-  background: #8b5cf6 !important;
+  background: #56c56a !important;
   background-image: none !important;
-  border-color: #8b5cf6 !important;
+  border-color: #56c56a !important;
   color: #ffffff !important;
 }
 
@@ -1322,16 +1322,16 @@ body html body .plan-card--violet a.button.button-primary {
 }
 
 .plan-card--cyan .button-primary {
-  background-color: #00d4ff !important;
+  background-color: #56c56a !important;
   background-image: none !important;
-  border-color: #00d4ff !important;
+  border-color: #56c56a !important;
   color: #ffffff !important;
 }
 
 .plan-card--violet .button-primary {
-  background-color: #8b5cf6 !important;
+  background-color: #56c56a !important;
   background-image: none !important;
-  border-color: #8b5cf6 !important;
+  border-color: #56c56a !important;
   color: #ffffff !important;
 }
 
@@ -3350,7 +3350,7 @@ html:not([data-theme]) .brand-logo-dark {
 }
 
 .tv-marquee::-webkit-scrollbar-thumb{
-    background:#00d4ff;
+    background:#56c56a;
     border-radius:10px;
 }
 
@@ -3478,14 +3478,14 @@ html[data-theme="light"] .plan-card--cyan .plan-speed strong,
 html[data-theme="light"] .plan-card--cyan .plan-speed span,
 html[data-theme="dark"] .plan-card--cyan .plan-speed strong,
 html[data-theme="dark"] .plan-card--cyan .plan-speed span {
-  color: #00d4ff !important;
+  color: #56c56a !important;
 }
 
 html[data-theme="light"] .plan-card--violet .plan-speed strong,
 html[data-theme="light"] .plan-card--violet .plan-speed span,
 html[data-theme="dark"] .plan-card--violet .plan-speed strong,
 html[data-theme="dark"] .plan-card--violet .plan-speed span {
-  color: #8b5cf6 !important;
+  color: #56c56a !important;
 }
 
 /* Configuração tipográfica idêntica ao padrão visual corporativo */
@@ -3587,11 +3587,11 @@ html[data-theme="light"] .plan-card--lime {
 }
 
 html[data-theme="light"] .plan-card--cyan {
-  border-top-color: #00d4ff !important;
+  border-top-color: #56c56a !important;
 }
 
 html[data-theme="light"] .plan-card--violet {
-  border-top-color: #8b5cf6 !important;
+  border-top-color: #56c56a !important;
 }
 
 /* Remove qualquer traço, linha ou sombra preta no topo/canto dos cards no tema claro */
@@ -3611,13 +3611,13 @@ html[data-theme="light"] .plan-card--lime {
 }
 
 html[data-theme="light"] .plan-card--cyan {
-  border-top-color: #00d4ff !important;
-  --plan-accent: #00d4ff;
+  border-top-color: #56c56a !important;
+  --plan-accent: #56c56a;
 }
 
 html[data-theme="light"] .plan-card--violet {
-  border-top-color: #8b5cf6 !important;
-  --plan-accent: #8b5cf6;
+  border-top-color: #56c56a !important;
+  --plan-accent: #56c56a;
 }
 
 /* Força a cor correta no número dos megas dos planos no tema claro */
@@ -3628,12 +3628,12 @@ html[data-theme="light"] .plan-card--lime .plan-speed span {
 
 html[data-theme="light"] .plan-card--cyan .plan-speed strong,
 html[data-theme="light"] .plan-card--cyan .plan-speed span {
-  color: #00d4ff !important;
+  color: #56c56a !important;
 }
 
 html[data-theme="light"] .plan-card--violet .plan-speed strong,
 html[data-theme="light"] .plan-card--violet .plan-speed span {
-  color: #8b5cf6 !important;
+  color: #56c56a !important;
 }
 
 /* Remove os círculos com efeito blur escuro que criam o sombreado nas pontas da seção de planos no tema claro */
@@ -4665,7 +4665,7 @@ b {
   height:45px;
   border-radius:50%;
   border:0;
-  background:#00d4ff;
+  background:#56c56a;
   color:#000;
   font-size:25px;
   cursor:pointer;
@@ -5749,17 +5749,17 @@ body html body .plan-card--lime a.button.button-primary:hover {
 
 .plan-card--cyan .button-primary:hover,
 body html body .plan-card--cyan a.button.button-primary:hover {
-  background: #00d4ff !important;
-  background-color: #00d4ff !important;
-  border-color: #00d4ff !important;
+  background: #56c56a !important;
+  background-color: #56c56a !important;
+  border-color: #56c56a !important;
   color: #ffffff !important;
 }
 
 .plan-card--violet .button-primary:hover,
 body html body .plan-card--violet a.button.button-primary:hover {
-  background: #8b5cf6 !important;
-  background-color: #8b5cf6 !important;
-  border-color: #8b5cf6 !important;
+  background: #56c56a !important;
+  background-color: #56c56a !important;
+  border-color: #56c56a !important;
   color: #ffffff !important;
 }
 
